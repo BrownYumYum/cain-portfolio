@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@layer base {
+  h1 { @apply text-3xl md:text-4xl font-bold text-white mb-6 mt-8 tracking-tight; }
+  h2 { @apply text-2xl font-semibold text-white mb-4 mt-10 border-b border-zinc-800 pb-2; }
+  p { @apply text-zinc-300 text-lg leading-relaxed mb-6; }
+  
+  /* Styling for the back arrow link */
+  article a.back-link { @apply text-zinc-500 hover:text-zinc-300 transition-colors border-none; }
+  
+  /* Standard white border-bottom buttons */
+  article a:not(.back-link) { @apply text-white border-b border-zinc-600 hover:border-white transition-colors pb-0.5; }
+  
+  /* Specific styling for technical tables */
+  table { @apply w-full text-left mb-8 border-collapse; }
+  th { @apply text-zinc-100 border-b border-zinc-700 py-2 font-semibold; }
+  td { @apply text-zinc-400 border-b border-zinc-800 py-2 font-mono text-sm; }
+}
