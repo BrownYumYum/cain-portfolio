@@ -6,28 +6,33 @@ layout: ../../layouts/Layout.astro
 
 # AutoQuotes-to-HubSpot Synchronization Engine
 
-## The Challenge
-Maintaining synchronized product data across Revealize AutoQuotes and HubSpot required constant manual intervention. The organization needed an automated solution to reconcile vendor pricing and specifications in real-time.
+## Problem
+Maintaining synchronized product data across Revealize AutoQuotes and HubSpot required constant manual intervention. The organization needed an automated solution to reconcile vendor pricing and specifications in real-time to prevent operational bottlenecks and discrepancies.
 
-### Technical Evidence: Execution Log
-![Technical Audit Log](/sync-log-screenshot.png)
-*Automated audit script indexing 239,091 unique models to identify discrepancies.*
+## Solution
+Engineered a custom Python-based ETL pipeline and synchronization engine to automatically reconcile vendor data, pricing, and specifications across both platforms without manual input.
 
-## The Engineering Architecture
-I engineered a custom synchronization engine running on a dedicated Ubuntu Server to bridge the gap between industrial source data and the CRM.
+## Impact
+* **Eliminated quote-to-order discrepancies** by ensuring real-time data consistency across enterprise systems.
+* **Reduced manual workload by 15+ hours per week** for the operations team.
+* **Indexed and audited 239,000+ unique product models** autonomously to instantly identify missing or mismatched data.
 
-**Core Technical Implementations:**
+## System Design & Implementation
+Built a dedicated Ubuntu Server to host the synchronization engine, bridging the gap between industrial source data and the CRM.
+
 * **Regex-Based Normalization:** Developed a `super_clean()` function using Regular Expressions to strip HTML and normalize alphanumeric strings.
 * **Fuzzy Match Logic:** Engineered a `get_search_terms()` algorithm to decompose complex model strings into searchable fragments.
 * **Persistent Cache Architecture:** Implemented a JSON-based caching layer to store the "Ultimate Master Index," drastically reducing API latency.
 
-## Production Audit Results
+## Technical Example: Audit Log & Reconciliation Results
+The engine autonomously builds a master index, flags discrepancies, and normalizes the data into a clean, actionable audit report.
+
+![Technical Audit Log](/sync-log-screenshot.png)  
+*Automated audit script indexing 239,091 unique models to identify discrepancies.*
+
+**Production Audit Results:**
 
 | Title | SKU | Original Model | Vendor |
 | :--- | :--- | :--- | :--- |
 | Scotch-Brite Griddle Liquid | 1978 | 701 | 3M Purification |
 | Carbonless Guest Check Pad | 2110 | 412447 GT363 | Chef Master |
-| Black Stacking Side Chair | 123 | 888-11BLK | AAA Furniture |
-
-## The Business Impact
-This Linux based engine secured the organization’s pricing integrity. By automating the reconciliation, we eliminated Quote to Order discrepancies and saved the operations team **15+ hours per week**.
