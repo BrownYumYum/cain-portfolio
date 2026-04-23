@@ -4,36 +4,38 @@ layout: ../../layouts/Layout.astro
 
 [← Back to Systems](/projects)
 
-# Enterprise Data Migration & Audit System
+# AutoQuotes-to-HubSpot Synchronization Engine
 
 ## Problem
-A high-risk migration of 500,000+ records from a legacy Epicor Eclipse ERP threatened to cause massive data loss, inventory inconsistencies, and operational downtime if the transition was not handled with absolute precision. 
+Maintaining synchronized product data across Revealize AutoQuotes and HubSpot required constant manual intervention. Vendor pricing and specifications frequently drifted between systems, causing quote-to-order discrepancies and operational delays.
 
 ## Solution
-Developed a closed-loop validation pipeline and a custom Python-based Audit Server to monitor the migration in real-time, ensuring 100% traceability between the legacy ERP and the new CRM/e-commerce platforms.
+Engineered a custom Python-based ETL pipeline and synchronization engine to automatically reconcile vendor data, pricing, and specifications in real-time across both platforms.
 
 ## Impact
-* **Successfully migrated 500,000+ records** with zero production downtime.
-* **Maintained 100% data integrity** and full technical auditability.
-* **Prevented inventory loss** and workflow disruptions during a massive enterprise transition.
+* **Eliminated quote-to-order discrepancies** by ensuring real-time data consistency.
+* **Reduced manual workload by 15+ hours per week** for the operations team.
+* **Indexed and audited 239,000+ unique product models** autonomously to instantly identify missing data.
 
 ## System Design & Implementation
-Built a standalone Python application functioning as a persistent Flask Audit Server to validate data flow across multiple APIs.
+Built a dedicated Ubuntu Server to host the synchronization engine, bridging the gap between industrial source data and the CRM.
 
-* **Persistent Monitoring:** Engineered `audit_server.py` to act as a background daemon on Ubuntu, providing continuous technical traceability during the migration.
-* **OAuth & API Security:** Programmatically managed secure OAuth flows to interface with the REST Admin APIs for external platforms like Shopify and HubSpot.
-* **Recursive Pagination:** Implemented a link-parsing algorithm to safely traverse paginated API headers, ensuring 100% variant capture for large datasets without dropping records.
+* **Regex-Based Normalization:** Developed custom data-cleaning functions (`super_clean()`) to strip HTML and normalize unstructured alphanumeric strings.
+* **Fuzzy Match Logic:** Engineered a search algorithm (`get_search_terms()`) to decompose complex model strings and accurately match variants across disparate systems.
+* **Persistent Cache Architecture:** Implemented a caching layer to store the "Ultimate Master Index," allowing the system to handle massive vendor datasets (312 manufacturers) without API latency.
 
-## Technical Example: Closed-Loop Validation Logic
-This snippet demonstrates how the audit server reconstructed live product URLs and validated SKU/pricing data to instantly verify data integrity across platforms.
+Technical Evidence: Execution Log  
+*This execution log demonstrates the engine autonomously building a master index and auditing live Shopify data to flag missing or mismatched inventory.*
 
-```python
-# Validation logic from audit_server.py
-for p in products:
-    title = p.get('title', 'N/A')
-    handle = p.get('handle', '')
-    live_link = f"https://{STORE_WEB_DOMAIN}/products/{handle}"
-    
-    for v in p.get('variants', []):
-        # Writes validated records to the audit log for real-time reconciliation
-        writer.writerow([title, v.get('sku', 'N/A'), v.get('price', 'N/A'), live_link])
+```bash
+ubuntu@ubuntu-Inspiron-3668:~$ python3 "/home/ubuntu/cain/AQ Auto/audit_website_aq.py"
+--- 📁 Step 1: Loading Approved Vendor IDs ---
+Found 312 Manufacturers.
+
+--- 🚀 Step 2: Building ULTIMATE Master Index ---
+Loading Ultimate Cache...
+
+Total Unique Models Indexed: 239091
+
+--- 🛒 Step 3: Auditing Shopify Data ---
+ MISSING: WL7203 | Walco
