@@ -7,35 +7,32 @@ layout: ../../layouts/Layout.astro
 # AutoQuotes-to-HubSpot Synchronization Engine
 
 ## Problem
-Maintaining synchronized product data across Revealize AutoQuotes and HubSpot required constant manual intervention. Vendor pricing and specifications frequently drifted between systems, causing quote-to-order discrepancies and operational delays.
+Maintaining synchronized product data across Revealize AutoQuotes and HubSpot required constant manual intervention. The organization needed an automated solution to reconcile vendor pricing and specifications in real-time to prevent operational bottlenecks and discrepancies.
 
 ## Solution
-Engineered a custom Python-based ETL pipeline and synchronization engine to automatically reconcile vendor data, pricing, and specifications in real-time across both platforms.
+Engineered a custom Python-based ETL pipeline and synchronization engine to automatically reconcile vendor data, pricing, and specifications across both platforms without manual input.
 
 ## Impact
-* **Eliminated quote-to-order discrepancies** by ensuring real-time data consistency.
+* **Eliminated quote-to-order discrepancies** by ensuring real-time data consistency across enterprise systems.
 * **Reduced manual workload by 15+ hours per week** for the operations team.
-* **Indexed and audited 239,000+ unique product models** autonomously to instantly identify missing data.
+* **Indexed and audited 239,000+ unique product models** autonomously to instantly identify missing or mismatched data.
 
 ## System Design & Implementation
 Built a dedicated Ubuntu Server to host the synchronization engine, bridging the gap between industrial source data and the CRM.
 
-* **Regex-Based Normalization:** Developed custom data-cleaning functions (`super_clean()`) to strip HTML and normalize unstructured alphanumeric strings.
-* **Fuzzy Match Logic:** Engineered a search algorithm (`get_search_terms()`) to decompose complex model strings and accurately match variants across disparate systems.
-* **Persistent Cache Architecture:** Implemented a caching layer to store the "Ultimate Master Index," allowing the system to handle massive vendor datasets (312 manufacturers) without API latency.
+* **Regex-Based Normalization:** Developed a `super_clean()` function using Regular Expressions to strip HTML and normalize alphanumeric strings.
+* **Fuzzy Match Logic:** Engineered a `get_search_terms()` algorithm to decompose complex model strings into searchable fragments.
+* **Persistent Cache Architecture:** Implemented a JSON-based caching layer to store the "Ultimate Master Index," drastically reducing API latency.
 
-Technical Evidence: Execution Log  
-*This execution log demonstrates the engine autonomously building a master index and auditing live Shopify data to flag missing or mismatched inventory.*
+## Technical Example: Audit Log & Reconciliation Results
+The engine autonomously builds a master index, flags discrepancies, and normalizes the data into a clean, actionable audit report.
 
-```bash
-ubuntu@ubuntu-Inspiron-3668:~$ python3 "/home/ubuntu/cain/AQ Auto/audit_website_aq.py"
---- 📁 Step 1: Loading Approved Vendor IDs ---
-Found 312 Manufacturers.
+![Technical Audit Log](/sync-log-screenshot.png)  
+*Automated audit script indexing 239,091 unique models to identify discrepancies.*
 
---- 🚀 Step 2: Building ULTIMATE Master Index ---
-Loading Ultimate Cache...
+**Production Audit Results:**
 
-Total Unique Models Indexed: 239091
-
---- 🛒 Step 3: Auditing Shopify Data ---
- MISSING: WL7203 | Walco
+| Title | SKU | Original Model | Vendor |
+| :--- | :--- | :--- | :--- |
+| Scotch-Brite Griddle Liquid | 1978 | 701 | 3M Purification |
+| Carbonless Guest Check Pad | 2110 | 412447 GT363 | Chef Master |
