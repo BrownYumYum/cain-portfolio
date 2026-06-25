@@ -20,16 +20,22 @@ Engineered a custom Python-based ETL pipeline and synchronization engine to auto
 ## System Design & Implementation
 Built a dedicated Ubuntu Server to host the synchronization engine, bridging the gap between industrial source data and the CRM.
 
-* **Regex-Based Normalization:** Developed a `super_clean()` function using Regular Expressions to strip HTML and normalize alphanumeric strings.
+* **Regex-Based Normalization:** Developed a `super_clean()` function using Python’s re module to ensure high-fidelity inputs across heterogeneous database schemas.
 * **Fuzzy Match Logic:** Engineered a `get_search_terms()` algorithm to decompose complex model strings into searchable fragments.
-* **Persistent Cache Architecture:** Implemented a JSON-based caching layer to store the "Ultimate Master Index," drastically reducing API latency.
+* **Persistent Cache Architecture:** Architected a JSON-based caching layer to optimize API throughput, reducing latency and preventing rate-limit bottlenecks during high-volume sync cycles.
 
 ## Technical Example: Audit Log & Reconciliation Results
 The engine autonomously builds a master index, flags discrepancies, and normalizes the data into a clean, actionable audit report.
 
 ![Technical Audit Log](/sync-log-screenshot.png)  
 *Automated audit script indexing 239,091 unique models to identify discrepancies.*
-
+def super_clean(data_string):
+    """
+    Normalizes complex model strings for high-fidelity database indexing.
+    """
+    # Strip HTML and normalize special characters
+    cleaned = re.sub('<[^<]+?>', '', data_string)
+    return ' '.join(cleaned.split()).upper()
 **Production Audit Results:**
 
 | Title | SKU | Original Model | Vendor |
