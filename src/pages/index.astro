@@ -2,93 +2,51 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Cain Anthony Macias | Business Systems Engineer">
-  <div class="fixed inset-0 -z-10 bg-zinc-950">
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(at_top_center,rgba(63,63,70,0.15)_0%,transparent_80%)]"></div>
-  </div>
-
-  <header class="mb-16 mt-12 flex flex-col-reverse md:flex-row gap-8 items-center md:items-start">
-    <div class="flex-1 text-center md:text-left">
-      <h1 class="text-4xl md:text-6xl font-bold text-white mb-2 tracking-tight">Cain Anthony Macias</h1>
-      <h2 class="text-xl md:text-2xl text-zinc-400 mb-2 font-medium leading-tight">
-        Business Systems Engineer <br class="hidden md:block"/>
-        <span class="text-zinc-500 text-lg md:text-xl font-normal italic">MBA Candidate: Data Analytics & Healthcare Administration</span>
+<Layout title="Cain Anthony Macias | Systems Engineer">
+  <main class="max-w-4xl mx-auto px-4 py-20">
+    
+    <header class="mb-16">
+      <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+        Cain Anthony Macias
+      </h1>
+      <h2 class="text-2xl md:text-3xl text-blue-400 font-medium mb-6">
+        Systems Engineer & Operations Technology Analyst
       </h2>
-      <p class="text-sm text-zinc-500 mt-2 mb-8">
-        Specializing in inventory systems, data integrity, and process automation
+      <p class="text-lg text-zinc-400 leading-relaxed max-w-2xl mb-8">
+        I build automated pipelines, robust ETL engines, and data-driven dashboards to bridge the gap between technical operations and business intelligence. Currently an MBA candidate specializing in Data Analytics and Healthcare Administration, I focus on transforming raw systems data into actionable enterprise solutions using Python, Django, and AWS.
       </p>
       
-      <div class="space-y-5 text-base md:text-lg leading-relaxed text-zinc-300 max-w-xl md:max-w-2xl">
-        <p>
-          I design and improve operational systems that ensure <span class="text-white font-medium">inventory accuracy, data integrity, and reliable workflows</span> across ERP and cloud platforms.
-        </p>
-
-        <p>
-          I focus on solving operational issues such as <span class="text-white font-medium">reconciliation errors, data inconsistencies, and inefficient processes</span> by building scalable systems that reduce errors and improve efficiency.
-        </p>
-
-        <p class="text-zinc-400">
-          Led a <span class="text-white">500,000+ record</span> migration with zero downtime and built automation pipelines that eliminated <span class="text-white">15+ hours/week</span> of manual work.
-        </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/projects" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+          View Enterprise Projects
+        </a>
+        <a href="mailto:your.email@example.com" class="bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+          Contact Me
+        </a>
       </div>
-    </div>
-    
-    <div class="w-48 h-48 md:w-64 md:h-64 shrink-0">
-      <img 
-        src="/profile.jpg" 
-        alt="Cain Anthony Macias" 
-        class="rounded-2xl border border-zinc-800 grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl object-cover w-full h-full bg-zinc-900"
-      />
-    </div>
-  </header>
+    </header>
 
-  <section class="mb-12">
-    <h3 class="text-xs uppercase tracking-[0.2em] text-zinc-500 font-bold mb-6">Professional Certifications</h3>
-    <div class="flex flex-wrap gap-3">
-      <span class="px-4 py-2 bg-zinc-900/50 border border-zinc-800 text-zinc-300 rounded-lg text-sm font-medium">Google Certified Project Manager</span>
-      <span class="px-4 py-2 bg-zinc-900/50 border border-zinc-800 text-zinc-300 rounded-lg text-sm font-medium">IBM Certified Business Analyst</span>
-      <span class="px-4 py-2 bg-white/10 border border-white/30 text-white rounded-lg text-sm font-medium ring-1 ring-white/10">MBA Candidate | 4.0 GPA</span>
-    </div>
-  </section>
-
-  <section class="mb-16">
-    <h3 class="text-xl font-semibold text-white border-b border-zinc-800 pb-3 mb-8">Education</h3>
-    <div class="space-y-8">
-      <div>
-        <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-1">
-          <h4 class="text-zinc-100 font-bold text-lg">Master of Business Administration (MBA)</h4>
-          <span class="text-zinc-500 font-mono text-sm">Expected 2027</span>
+    <section class="border-t border-zinc-800 pt-12">
+      <h3 class="text-sm font-bold text-zinc-500 uppercase tracking-wider mb-6">Core Infrastructure & Stack</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-zinc-300 font-mono text-sm">
+        <div class="bg-zinc-900/50 border border-zinc-800 p-4 rounded-lg">
+          <span class="block text-blue-400 mb-1">Backend</span>
+          Python, Django, Celery
         </div>
-        <p class="text-zinc-400 font-medium">Texas A&M University-Corpus Christi</p>
-        <p class="text-zinc-500 text-sm mt-1">Dual Concentration: Business Analytics & Healthcare Administration | GPA: 4.0</p>
-      </div>
-
-      <div>
-        <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-1">
-          <h4 class="text-zinc-100 font-bold text-lg">Bachelor of Applied Science (BAS)</h4>
-          <span class="text-zinc-500 font-mono text-sm">Completed</span>
+        <div class="bg-zinc-900/50 border border-zinc-800 p-4 rounded-lg">
+          <span class="block text-blue-400 mb-1">Data & ETL</span>
+          PostgreSQL, MongoDB, Pandas
         </div>
-        <p class="text-zinc-400 font-medium">Del Mar College</p>
-        <p class="text-zinc-500 text-sm mt-1">Organizational Management & Leadership | Honors: President's List</p>
-      </div>
-
-      <div>
-        <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-1">
-          <h4 class="text-zinc-100 font-bold text-lg">Associate of Applied Science (AAS)</h4>
-          <span class="text-zinc-500 font-mono text-sm">Completed</span>
+        <div class="bg-zinc-900/50 border border-zinc-800 p-4 rounded-lg">
+          <span class="block text-blue-400 mb-1">Cloud/DevOps</span>
+          AWS (EC2/RDS), Docker
         </div>
-        <p class="text-zinc-400 font-medium">Del Mar College</p>
-        <p class="text-zinc-500 text-sm mt-1">Medical Laboratory Technology</p>
+        <div class="bg-zinc-900/50 border border-zinc-800 p-4 rounded-lg">
+          <span class="block text-blue-400 mb-1">Hardware</span>
+          RTX Systems, Network Auth
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="border-t border-zinc-900 pt-12 pb-24 text-center md:text-left">
-    <h3 class="text-2xl font-bold text-white mb-6 tracking-tight">Operational Systems & Case Studies</h3>
-    <p class="text-zinc-400 mb-8 max-w-xl text-lg">Case studies on inventory reconciliation, process automation, and high-integrity data migrations.</p>
-    <a href="/projects" class="inline-flex items-center justify-center bg-white text-zinc-950 font-bold px-8 py-4 rounded-lg hover:bg-zinc-200 transition-all hover:scale-[1.02] active:scale-95 shadow-xl shadow-white/5">
-      View Operational Systems &rarr;
-    </a>
-  </section>
+  </main>
 </Layout>
