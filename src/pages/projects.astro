@@ -2,30 +2,51 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Engineered Systems | Cain Anthony Macias">
-  <header class="mb-12 mt-12">
-    <a href="/" class="text-zinc-500 hover:text-zinc-300 transition-colors no-underline">&larr; Back to Profile</a>
-    <h1 class="text-4xl font-bold text-white mt-8 mb-2">Engineered Systems</h1>
-    <p class="text-xl text-zinc-400">Production-grade deployments and architectural case studies.</p>
-  </header>
+<Layout title="Systems & Operations Projects | Cain Anthony Macias">
+  <main class="max-w-4xl mx-auto px-4 py-12">
+    
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold text-white mb-4">Systems & Operations</h1>
+      <p class="text-lg text-zinc-400">
+        Architecting scalable data pipelines, automated integrations, and enterprise infrastructure to bridge the gap between technical operations and business intelligence.
+      </p>
+    </header>
 
-  <div class="grid grid-cols-1 gap-6">
-    <article class="border border-zinc-800 p-8 rounded-lg bg-zinc-900/50 hover:border-zinc-600 transition-colors">
-      <h2 class="text-2xl font-semibold text-white mb-2 mt-0 border-none">Enterprise B2B Ordering Architecture</h2>
-      <p class="text-zinc-400 mb-6 text-base">Architected a full-stack Django platform on AWS featuring a dynamic tiered-pricing engine and strict Section 508 compliance.</p>
-      <a href="/projects/b2b-ordering-platform/" class="text-white hover:text-zinc-300 no-underline font-medium">Read Case Study &rarr;</a>
-    </article>
+    <div class="grid gap-6 md:grid-cols-2">
+        
+        <a href="/projects/python-automation-engine" class="block bg-zinc-900 border border-zinc-800 rounded-lg p-6 hover:border-zinc-500 transition-colors group">
+            <h2 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Enterprise Data Engine</h2>
+            <p class="text-zinc-400 text-sm mb-4">
+                Automated ETL pipeline bridging AutoQuotes API, Epicor Eclipse ERP, and HubSpot via Django and MongoDB Atlas.
+            </p>
+            <span class="text-xs font-mono bg-zinc-800 text-zinc-300 px-2 py-1 rounded">Python / Django / MongoDB / AWS</span>
+        </a>
 
-    <article class="border border-zinc-800 p-8 rounded-lg bg-zinc-900/50 hover:border-zinc-600 transition-colors">
-      <h2 class="text-2xl font-semibold text-white mb-2 mt-0 border-none">AutoQuotes-to-HubSpot Sync Engine</h2>
-      <p class="text-zinc-400 mb-6 text-base">Engineered a decoupled Python ETL pipeline and custom Ubuntu server to sanitize inventory data and autonomously sync with HubSpot CRM.</p>
-      <a href="/projects/python-automation-engine/" class="text-white hover:text-zinc-300 no-underline font-medium">Read Case Study &rarr;</a>
-    </article>
+        <a href="/projects/b2b-ordering-platform" class="block bg-zinc-900 border border-zinc-800 rounded-lg p-6 hover:border-zinc-500 transition-colors group">
+            <h2 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Enterprise B2B Platform</h2>
+            <p class="text-zinc-400 text-sm mb-4">
+                Asynchronous Django/Celery middleware architecture synchronizing Shopify e-commerce with legacy ERP fulfillment.
+            </p>
+            <span class="text-xs font-mono bg-zinc-800 text-zinc-300 px-2 py-1 rounded">Django / PostgreSQL / Celery / Docker</span>
+        </a>
 
-    <article class="border border-zinc-800 p-8 rounded-lg bg-zinc-900/50 hover:border-zinc-600 transition-colors">
-      <h2 class="text-2xl font-semibold text-white mb-2 mt-0 border-none">Epicor Eclipse Migration & Audit</h2>
-      <p class="text-zinc-400 mb-6 text-base">Executed a zero-downtime transition of 500,000+ records from Epicor Eclipse to HubSpot using a custom Python Audit Server.</p>
-      <a href="/projects/enterprise-migration/" class="text-white hover:text-zinc-300 no-underline font-medium">Read Case Study &rarr;</a>
-    </article>
-  </div>
+        <a href="/projects/enterprise-migration" class="block bg-zinc-900 border border-zinc-800 rounded-lg p-6 hover:border-zinc-500 transition-colors group">
+            <h2 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Epicor Eclipse ERP Migration</h2>
+            <p class="text-zinc-400 text-sm mb-4">
+                Zero-downtime data audit and migration pipeline ensuring 100% data parity for enterprise warehouse operations.
+            </p>
+            <span class="text-xs font-mono bg-zinc-800 text-zinc-300 px-2 py-1 rounded">Data Analytics / Pandas / ETL workflows</span>
+        </a>
+
+        <a href="/projects/django-inventory-dashboard" class="block bg-zinc-900 border border-zinc-800 rounded-lg p-6 hover:border-zinc-500 transition-colors group relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-blue-900/50 text-blue-300 text-[10px] font-bold px-2 py-1 rounded-bl-lg uppercase tracking-wider">Active Development</div>
+            <h2 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Real-Time Intelligence Dashboard</h2>
+            <p class="text-zinc-400 text-sm mb-4">
+                AWS-hosted centralized intelligence hub for live inventory monitoring and automated pricing parity alerts.
+            </p>
+            <span class="text-xs font-mono bg-zinc-800 text-zinc-300 px-2 py-1 rounded">Django / AWS / REST API Integration</span>
+        </a>
+
+    </div>
+  </main>
 </Layout>
