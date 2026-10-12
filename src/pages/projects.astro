@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Projects | Cain Anthony Macias">
+<Layout title="Projects & Systems | Cain Anthony Macias">
   <nav class="flex items-center justify-between py-6 mb-12 border-b border-zinc-800/60">
     <a href="/" class="font-semibold text-white tracking-tight flex items-center gap-2">
       <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
@@ -22,38 +22,87 @@ import Layout from '../layouts/Layout.astro';
     <p class="text-zinc-400">Enterprise software platforms, automation pipelines, and production toolsets.</p>
   </header>
 
-  <div class="space-y-8">
-    <!-- JEANSRS.OPS (New Featured Project) -->
-    <div class="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl hover:border-zinc-700 transition-all">
+  <div class="space-y-6">
+    <!-- JEANSRS.OPS -->
+    <a href="/projects/jeansrs-ops" class="block bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl hover:border-zinc-700 transition-all group">
       <div class="flex items-center justify-between gap-4 mb-2">
-        <h2 class="text-xl font-bold text-white">JEANSRS.OPS — Central Operations & AI Hub</h2>
+        <h2 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">JEANSRS.OPS — Central Operations & AI Hub</h2>
         <span class="font-mono text-xs text-emerald-400 bg-emerald-950/40 border border-emerald-800/40 px-2.5 py-1 rounded-full">Active Production</span>
       </div>
       <p class="text-sm text-zinc-400 leading-relaxed mb-4">
         Unified enterprise integration platform connecting Epicor Eclipse ERP with AutoQuotes pricing sync, federal GSA MAS compliance reporting, HubSpot CRM, XPO/Eniture logistics, and autonomous AI agents powered by Claude with human-in-the-loop approvals.
       </p>
-      <div class="flex flex-wrap gap-2 font-mono text-xs mb-4">
-        <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">Python</span>
-        <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">Node.js</span>
-        <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">Epicor Eclipse ERP</span>
-        <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">Claude AI Gateway</span>
+      <div class="flex flex-wrap gap-2 font-mono text-xs text-zinc-300">
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">Python</span>
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">Node.js</span>
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">Epicor Eclipse ERP</span>
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">Claude AI Gateway</span>
       </div>
-    </div>
+    </a>
 
-    <!-- Real-Time Intelligence Dashboard (Fixed Link) -->
-    <div class="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl hover:border-zinc-700 transition-all">
+    <!-- Enterprise B2B Ordering Platform -->
+    <a href="/projects/b2b-ordering-platform" class="block bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl hover:border-zinc-700 transition-all group">
       <div class="flex items-center justify-between gap-4 mb-2">
-        <h2 class="text-xl font-bold text-white">Real-Time Intelligence Dashboard</h2>
+        <h2 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">Enterprise B2B Ordering & Fulfillment Platform</h2>
         <span class="font-mono text-xs text-blue-400 bg-blue-950/40 border border-blue-800/40 px-2.5 py-1 rounded-full">AWS Cloud</span>
       </div>
       <p class="text-sm text-zinc-400 leading-relaxed mb-4">
-        AWS-hosted centralized intelligence hub designed for live inventory monitoring and automated pricing parity alerts across database endpoints.
+        Modular, containerized Django application utilizing Celery for asynchronous task management and automated middleware synchronization between Shopify and legacy ERP databases.
       </p>
-      <div class="flex flex-wrap gap-2 font-mono text-xs">
-        <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">Django</span>
-        <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">AWS EC2</span>
-        <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">REST API</span>
+      <div class="flex flex-wrap gap-2 font-mono text-xs text-zinc-300">
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">Django</span>
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">Celery / Redis</span>
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">AWS EC2 / RDS</span>
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">PostgreSQL</span>
       </div>
-    </div>
+    </a>
+
+    <!-- Django MongoDB Infrastructure -->
+    <a href="/projects/django-mongodb-infrastructure" class="block bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl hover:border-zinc-700 transition-all group">
+      <div class="flex items-center justify-between gap-4 mb-2">
+        <h2 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">Django & MongoDB Catalog Platform</h2>
+        <span class="font-mono text-xs text-zinc-400 bg-zinc-800 px-2.5 py-1 rounded-full">Database & API</span>
+      </div>
+      <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+        Full-stack inventory application backed by MongoDB Atlas with live API-driven product data updates and automated inventory tracking.
+      </p>
+      <div class="flex flex-wrap gap-2 font-mono text-xs text-zinc-300">
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">Django</span>
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">MongoDB Atlas</span>
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">REST APIs</span>
+      </div>
+    </a>
+
+    <!-- Enterprise Migration -->
+    <a href="/projects/enterprise-migration" class="block bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl hover:border-zinc-700 transition-all group">
+      <div class="flex items-center justify-between gap-4 mb-2">
+        <h2 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">Enterprise System Data Migration</h2>
+        <span class="font-mono text-xs text-zinc-400 bg-zinc-800 px-2.5 py-1 rounded-full">ETL Pipeline</span>
+      </div>
+      <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+        Robust data transformation and validation pipelines ensuring zero-loss record migration across high-volume enterprise ERP and CRM environments.
+      </p>
+      <div class="flex flex-wrap gap-2 font-mono text-xs text-zinc-300">
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">Python (Pandas)</span>
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">SQL</span>
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">ETL</span>
+      </div>
+    </a>
+
+    <!-- Python Automation Engine -->
+    <a href="/projects/python-automation-engine" class="block bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl hover:border-zinc-700 transition-all group">
+      <div class="flex items-center justify-between gap-4 mb-2">
+        <h2 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">Python Automation & Reconciliation Engine</h2>
+        <span class="font-mono text-xs text-zinc-400 bg-zinc-800 px-2.5 py-1 rounded-full">Automation</span>
+      </div>
+      <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+        Automated bots and change-detection pricing engines that parse vendor catalogs, eliminate manual catalog errors, and generate validated ERP import files daily.
+      </p>
+      <div class="flex flex-wrap gap-2 font-mono text-xs text-zinc-300">
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">Python</span>
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">AutoQuotes API</span>
+        <span class="bg-zinc-800 px-2.5 py-1 rounded">ERP Integration</span>
+      </div>
+    </a>
   </div>
 </Layout>
