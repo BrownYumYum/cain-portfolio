@@ -1,143 +1,101 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const projects = [
+  { number: '01', name: 'JEANSRS.OPS', subtitle: 'ERP-connected operations platform with AI-assisted workflows', type: 'Enterprise systems', href: '/projects/jeansrs-ops', stack: 'React · TypeScript · Integrations' },
+  { number: '02', name: 'Python automation & reconciliation', subtitle: 'Catalog matching, vendor pricing changes, and reporting', type: 'Automation', href: '/projects/python-automation-engine', stack: 'Python · ETL · APIs' },
+  { number: '03', name: 'Enterprise system migration', subtitle: 'Data transformation, quality checks, and system parity', type: 'Data engineering', href: '/projects/enterprise-migration', stack: 'ERP · Python · Validation' },
+  { number: '04', name: 'B2B ordering & fulfillment', subtitle: 'An account-based ordering application for institutions', type: 'Web applications', href: '/projects/b2b-ordering-platform', stack: 'Django · PostgreSQL · AWS' },
+];
+
+const education = [
+  { degree: 'MS in Computer Science', school: 'Texas A&M University–Corpus Christi', detail: 'In progress' },
+  { degree: 'MBA, Business Analytics & Healthcare Administration', school: 'Texas A&M University–Corpus Christi', detail: '4.0 GPA · Expected 2027' },
+  { degree: 'BAS, Management & Leadership', school: 'Del Mar College', detail: '2025 · Dean’s & President’s Lists' },
+  { degree: 'AAS, Medical Laboratory Technology', school: 'Del Mar College', detail: '2024' },
+];
 ---
-<Layout
-  title="Cain Macias — Business Systems & Automation"
-  description="Cain Macias builds practical business systems, enterprise integrations, and Python automation from South Texas."
->
-  <header class="site-header">
-    <a class="site-name" href="/" aria-label="Cain Macias home"><span class="brand-mark">c<span>.</span></span> cain macias</a>
-    <nav aria-label="Main navigation" class="site-nav">
-      <a href="/projects">work</a>
-      <a href="/about">about</a>
-      <a href="/gear">gear</a>
-      <a class="nav-social" href="https://www.linkedin.com/in/cain-macias-a69801306/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-      <a class="nav-contact" href="mailto:cainmacias69@gmail.com">let’s talk <span aria-hidden="true">↗</span></a>
-    </nav>
-  </header>
+<Layout title="Cain Macias — Business Systems Engineer" description="Enterprise integration, software engineering, and AI automation case studies by Cain Macias.">
 
-  <section class="hero" aria-labelledby="intro-title">
-    <div class="hero-copy">
-      <p class="eyebrow"><span class="status-dot"></span> SOUTH TEXAS · BUSINESS SYSTEMS & SOFTWARE</p>
-      <h1 id="intro-title">I make business systems <span>work better.</span></h1>
-      <p class="intro-copy">Hey, I’m Cain — an operations-minded systems builder working across enterprise software, data, integrations, and automation. I like finding the friction in a workflow and building something practical to remove it.</p>
-      <div class="hero-actions">
-        <a class="primary-link" href="/projects">Explore my work <span aria-hidden="true">↗</span></a>
-        <a class="secondary-link" href="mailto:cainmacias69@gmail.com">Get in touch</a>
-        <a class="hero-linkedin" href="https://www.linkedin.com/in/cain-macias-a69801306/" target="_blank" rel="noopener noreferrer">LinkedIn profile <span aria-hidden="true">↗</span></a>
-      </div>
-      <div class="hero-tags">
-        <span>Enterprise systems</span><span>Python automation</span><span>Data & integrations</span>
+  <section class="ref-hero ref-reveal" aria-labelledby="home-heading">
+    <div class="ref-hero-copy">
+      <p class="ref-overline"><span class="ref-online-dot"></span> BUSINESS SYSTEMS ENGINEER · TEXAS</p>
+      <h1 id="home-heading">hello, Cain here<span class="ref-hero-cursor" aria-hidden="true">_</span></h1>
+      <p class="ref-hero-lead">I build systems that connect the dots between <strong>people, data, and business operations.</strong></p>
+      <p class="ref-hero-body">My work spans enterprise integrations, custom software, and AI-assisted automation. I enjoy solving the messy operational problems that don't fit neatly into one application.</p>
+      <div class="ref-hero-actions">
+        <a href="/projects" class="ref-button">Explore my work <span aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/cain-macias-a69801306/" target="_blank" rel="noopener noreferrer" class="ref-quiet-link">LinkedIn ↗</a>
+        <a href="mailto:cainmacias69@gmail.com" class="ref-quiet-link">Email ↗</a>
       </div>
     </div>
-    <aside class="hero-visual">
-      <div class="portrait-frame">
-        <img src="/profile.jpg" alt="Portrait of Cain Anthony Macias" class="profile-photo" />
-        <span class="portrait-corner portrait-corner-tl"></span><span class="portrait-corner portrait-corner-br"></span>
-      </div>
-      <div class="portrait-caption"><span class="caption-line"></span><span>BUILDING USEFUL THINGS, ONE WORKFLOW AT A TIME</span></div>
-      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-    </aside>
+    <figure class="ref-hero-photo">
+      <div class="ref-photo-surround"><img src="/profile.jpg" alt="Cain Macias" width="280" height="320" loading="eager" decoding="async" /></div>
+      <figcaption><span class="ref-online-dot"></span> building, learning, improving</figcaption>
+    </figure>
   </section>
 
-  <section class="featured-panel feature-spotlight" aria-labelledby="featured-title">
-    <div class="feature-spotlight-top">
-      <span class="eyebrow">FEATURED BUILD / 2026</span>
-      <span class="status-pill"><span class="status-dot"></span> Current project</span>
-    </div>
-    <div class="feature-spotlight-layout">
-      <div class="feature-spotlight-copy">
-        <p class="feature-overline">ENGINEERING THE BACK OFFICE</p>
-        <h2 id="featured-title">JEANSRS<span>.OPS</span></h2>
-        <p class="feature-lead">A connected operations platform for the messy space between ERP data, catalog pricing, customer workflows, and human-approved AI.</p>
-        <ul class="feature-highlights">
-          <li><span aria-hidden="true">↗</span> ERP + vendor catalog reconciliation</li>
-          <li><span aria-hidden="true">↗</span> Reviewable pricing and compliance workflows</li>
-          <li><span aria-hidden="true">↗</span> AI agent tools with human decision gates</li>
-        </ul>
-        <a class="feature-explore" href="/projects/jeansrs-ops">Explore the architecture <span aria-hidden="true">↗</span></a>
+  <section class="ref-featured ref-reveal" aria-labelledby="featured-heading">
+    <div class="ref-section-label"><span class="ref-label-line"></span> CURRENTLY BUILDING <span class="ref-label-right">FEATURED / 2026</span></div>
+    <a href="/projects/jeansrs-ops" class="ref-featured-link">
+      <div class="ref-featured-text">
+        <span class="ref-featured-pill"><span class="ref-online-dot"></span> In development</span>
+        <h2 id="featured-heading">JEANSRS.OPS <span aria-hidden="true">↗</span></h2>
+        <p>A connected operations platform bringing together ERP data, manufacturer catalogs, customer workflows, and human-reviewed AI actions.</p>
+        <div class="ref-tags"><span>Epicor Eclipse</span><span>React + TypeScript</span><span>API integrations</span><span>AI workflows</span></div>
+        <span class="ref-read-more">Read the technical case study <span aria-hidden="true">→</span></span>
       </div>
-      <div class="feature-system" aria-label="Simplified JEANSRS.OPS architecture">
-        <div class="feature-system-head">
-          <span>OPERATIONS / SYSTEM MAP</span>
-          <span class="feature-system-indicator" aria-hidden="true">● ● ●</span>
+      <div class="ref-system-art" aria-hidden="true">
+        <div class="ref-system-label">SYSTEM FLOW / SIMPLIFIED</div>
+        <div class="ref-system-upstream"><span>ERP</span><span>Catalogs</span><span>CRM</span></div>
+        <div class="ref-system-traces"><i></i><i></i><i></i></div>
+        <div class="ref-system-core"><small>OPERATIONS HUB</small><strong>JEANSRS.OPS</strong><small>integrate · validate · review</small></div>
+        <div class="ref-system-traces"><i></i><i></i><i></i></div>
+        <div class="ref-system-upstream ref-system-downstream"><span>Pricing</span><span>Reports</span><span>Agents</span></div>
+        <div class="ref-system-foot"><span class="ref-online-dot"></span> Human decisions stay in the loop</div>
+      </div>
+    </a>
+  </section>
+
+  <section class="ref-simple-section ref-reveal" aria-labelledby="projects-heading">
+    <div class="ref-section-label"><span class="ref-label-line"></span> SELECTED PROJECTS <span class="ref-label-right">01 — 04</span></div>
+    <div class="ref-section-heading">
+      <h2 id="projects-heading">things I've worked on</h2>
+      <a href="/projects" class="ref-text-link">View all projects <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="ref-work-list">
+      {projects.map(project => (
+        <a href={project.href} class="ref-work-row">
+          <span class="ref-work-number">{project.number}</span>
+          <span class="ref-work-content">
+            <span class="ref-work-name">{project.name}</span>
+            <span class="ref-work-desc">{project.subtitle}</span>
+          </span>
+          <span class="ref-work-type">{project.type}</span>
+          <span class="ref-work-arrow" aria-hidden="true">↗</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="ref-simple-section ref-reveal" aria-labelledby="education-heading">
+    <div class="ref-section-label"><span class="ref-label-line"></span> EDUCATION <span class="ref-label-right">CONTINUING TO LEARN</span></div>
+    <div class="ref-section-heading">
+      <h2 id="education-heading">a little more about my background</h2>
+      <a href="/about#education-title" class="ref-text-link">More about me <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="ref-education-list">
+      {education.map(item => (
+        <div class="ref-education-row">
+          <div><h3>{item.degree}</h3><span>{item.school}</span></div>
+          <span class="ref-education-year">{item.detail}</span>
         </div>
-        <div class="feature-system-inputs">
-          <span>EPICOR</span><span>AUTOQUOTES</span><span>SERVICE APIS</span>
-        </div>
-        <div class="feature-system-connector" aria-hidden="true"><span></span><span></span><span></span></div>
-        <div class="feature-system-core">
-          <span class="feature-system-core-caption">CONTROL LAYER</span>
-          <strong>JEANSRS.OPS</strong>
-          <small>integrate · validate · orchestrate</small>
-        </div>
-        <div class="feature-system-connector feature-system-connector-down" aria-hidden="true"><span></span><span></span><span></span></div>
-        <div class="feature-system-outputs">
-          <span>PRICING</span><span>CRM</span><span>AI TOOLS</span>
-        </div>
-        <div class="feature-system-guard"><span class="feature-system-guard-dot"></span> HUMAN APPROVAL + RUN HISTORY</div>
-      </div>
-    </div>
-    <div class="feature-spotlight-bottom">
-      <div class="feature-stat"><strong>18</strong><span>AUTOMATION HOOK ROUTES</span></div>
-      <div class="feature-stat"><strong>200</strong><span>RECORD IMPORT CHUNKS</span></div>
-      <div class="feature-stat"><strong>APPROVALS</strong><span>BEFORE HIGH-IMPACT AI ACTIONS</span></div>
+      ))}
     </div>
   </section>
 
-  <section class="content-section" aria-labelledby="now-title">
-    <div class="section-heading"><div><p class="eyebrow">THE SHORT VERSION</p><h2 id="now-title">What I’m focused on</h2></div><span class="section-index">01 / FOCUS</span></div>
-    <div class="focus-grid">
-      <article class="focus-card"><span class="card-number">01</span><span class="focus-icon">↔</span><h3>Systems integration</h3><p>Helping ERP, CRM, and operations platforms share cleaner data and support real business workflows.</p></article>
-      <article class="focus-card"><span class="card-number">02</span><span class="focus-icon">⌘</span><h3>Automation & data quality</h3><p>Building Python tools for catalog reconciliation, change detection, validation, and repeatable reporting.</p></article>
-      <article class="focus-card"><span class="card-number">03</span><span class="focus-icon">▤</span><h3>Practical software</h3><p>Developing web tools and internal workflows with an emphasis on usability, maintainability, and measurable value.</p></article>
-    </div>
+  <section class="ref-end-note ref-reveal">
+    <p>Have a workflow that needs untangling?</p>
+    <a href="mailto:cainmacias69@gmail.com">Let's talk systems <span aria-hidden="true">↗</span></a>
   </section>
-
-  <section class="content-section education-home" aria-labelledby="education-home-title">
-    <div class="section-heading">
-      <div><p class="eyebrow">TECHNOLOGY + BUSINESS + HEALTHCARE</p><h2 id="education-home-title">Education</h2></div>
-      <a class="subtle-link" href="/about#education-title">Full background ↗</a>
-    </div>
-    <p class="education-home-intro">Currently pursuing two graduate degrees while building enterprise software and business automation tools.</p>
-    <div class="education-home-grid">
-      <div class="education-home-item">
-        <span class="education-home-degree">MS · Computer Science</span>
-        <span class="education-home-place">Texas A&amp;M University–Corpus Christi</span>
-        <span class="education-home-meta">IN PROGRESS</span>
-      </div>
-      <div class="education-home-item">
-        <span class="education-home-degree">MBA · Business Analytics &amp; Healthcare Administration</span>
-        <span class="education-home-place">Texas A&amp;M University–Corpus Christi</span>
-        <span class="education-home-meta">4.0 GPA · EXPECTED 2027</span>
-      </div>
-      <div class="education-home-item">
-        <span class="education-home-degree">BAS · Management &amp; Leadership</span>
-        <span class="education-home-place">Del Mar College</span>
-        <span class="education-home-meta">2025 · DEAN’S &amp; PRESIDENT’S LISTS</span>
-      </div>
-      <div class="education-home-item">
-        <span class="education-home-degree">AAS · Medical Laboratory Technology</span>
-        <span class="education-home-place">Del Mar College</span>
-        <span class="education-home-meta">2024</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="content-section work-section" aria-labelledby="work-title">
-    <div class="section-heading"><div><p class="eyebrow">SELECTED PROJECTS</p><h2 id="work-title">A few things I’ve worked on</h2></div><a class="subtle-link" href="/projects">All projects <span aria-hidden="true">↗</span></a></div>
-    <ul class="work-list">
-      <li><a href="/projects/jeansrs-ops"><span class="work-number">01</span><span class="work-main"><span class="work-name">JEANSRS.OPS — enterprise operations platform</span><span class="work-description">Integration architecture, catalog pipelines, and human-supervised AI.</span></span><span class="work-meta">CURRENT BUILD</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="/projects/python-automation-engine"><span class="work-number">02</span><span class="work-main"><span class="work-name">Python automation & reconciliation</span><span class="work-description">Vendor pricing checks, catalog matching, and automated reporting.</span></span><span class="work-meta">AUTOMATION</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="/projects/enterprise-migration"><span class="work-number">03</span><span class="work-main"><span class="work-name">Enterprise system migration</span><span class="work-description">Moving operational records between business platforms with audit checks.</span></span><span class="work-meta">INTEGRATION</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
-      <li><a href="/projects/b2b-ordering-platform"><span class="work-number">04</span><span class="work-main"><span class="work-name">B2B ordering platform</span><span class="work-description">Account-based ordering, tiered pricing, and web application infrastructure.</span></span><span class="work-meta">WEB APP</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
-    </ul>
-  </section>
-
-  <section class="closing-panel">
-    <div><p class="eyebrow">HAVE A GOOD PROBLEM?</p><h2>Let’s build something useful.</h2><p>I’m always happy to talk systems, automation, analytics, and better ways to get work done.</p></div>
-    <a class="primary-link" href="mailto:cainmacias69@gmail.com">Say hello <span aria-hidden="true">↗</span></a>
-  </section>
-
-  <footer class="site-footer"><span>© 2026 Cain Macias</span><span>Made with curiosity in Texas <span class="footer-spark">✳</span></span><div><a href="https://www.linkedin.com/in/cain-macias-a69801306/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/BrownYumYum" target="_blank" rel="noreferrer">GitHub ↗</a><a href="mailto:cainmacias69@gmail.com">Email ↗</a></div></footer>
 </Layout>
