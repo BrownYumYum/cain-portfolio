@@ -2,25 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="About Me | Cain Anthony Macias">
-  <nav class="flex items-center justify-between py-6 mb-12 border-b border-zinc-800/60">
-    <a href="/" class="font-semibold text-white tracking-tight flex items-center gap-2">
-      <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
-      Cain Macias
-    </a>
-    <div class="flex items-center gap-5 text-sm text-zinc-400 font-medium">
-      <a href="/" class="hover:text-white transition-colors">Home</a>
-      <a href="/projects" class="hover:text-white transition-colors">Projects</a>
-      <a href="/gear" class="hover:text-white transition-colors">Gear</a>
-      <a href="/about" class="text-white transition-colors">About</a>
-      <a href="mailto:cainmacias69@gmail.com" class="hover:text-white transition-colors">Contact</a>
-    </div>
-  </nav>
+<Layout title="About & Education — Cain Macias" description="Explore Cain Macias’s background, degrees in computer science, business analytics and healthcare administration, and professional certifications.">
+  <header class="site-header">
+    <a class="site-name" href="/" aria-label="Cain Macias home"><span class="brand-mark">c<span>.</span></span> cain macias</a>
+    <nav aria-label="Main navigation" class="site-nav">
+      <a href="/projects">work</a>
+      <a href="/about" aria-current="page">about</a>
+      <a href="/gear">gear</a>
+      <a class="nav-contact" href="mailto:cainmacias69@gmail.com">let’s talk <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
 
   <header class="mb-12 max-w-3xl">
     <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4">About Me</h1>
     <p class="text-lg text-zinc-300 leading-relaxed">
-      I’m an Software, Systems Engineer, and Business Analyst based in Corpus Christi, Texas. My work centers on bridging complex legacy enterprise architectures with modern automation, data pipelines, and intelligent agents.
+      I work across software engineering, business systems, and business analysis in Corpus Christi, Texas. My work centers on bridging complex legacy enterprise architectures with modern automation, data pipelines, and intelligent agents.
     </p>
   </header>
 
@@ -28,7 +24,7 @@ import Layout from '../layouts/Layout.astro';
     <section>
       <h2 class="text-xl font-bold text-white mb-3">The Journey</h2>
       <p class="mb-4">
-        As a first-generation college graduate and the oldest of four, my path into technology wasn't linear. Growing up, I didn't have a roadmap or easy access to technical mentors. After facing the loss of my Father rigth before my 15th birthday, I had to learn how to navigate academic hurdles—moving through aviation mechanics, pre-med biology, and remedial coursework before discovering my footing in Medical Laboratory Technology.
+        As a first-generation college graduate and the oldest of four, my path into technology wasn't linear. Growing up, I didn't have a roadmap or easy access to technical mentors. After facing the loss of my Father right before my 15th birthday, I had to learn how to navigate academic hurdles—moving through aviation mechanics, pre-med biology, and remedial coursework before discovering my footing in Medical Laboratory Technology.
       </p>
       <p>
         Working as a Medical Lab Technician at Christus Health taught me the absolute value of precision, data integrity, and root-cause analysis. It was also where a mentor recognized my potential to look beyond individual testing errors and understand how entire operational systems function.
@@ -45,21 +41,67 @@ import Layout from '../layouts/Layout.astro';
       </p>
     </section>
 
-    <section>
-      <h2 class="text-xl font-bold text-white mb-3">Education & Credentials</h2>
-      <ul class="space-y-3 font-mono text-sm">
-        <li class="bg-zinc-900/60 border border-zinc-800 p-4 rounded-xl text-zinc-300">
-          <span class="text-white font-semibold block mb-1">Master of Science (MS) in Computer Science</span>
-          Texas A&M University-Corpus Christi <span class="text-zinc-500">(In Progress, Expected 2027)</span>
+    <section class="about-education" aria-labelledby="education-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ACADEMIC BACKGROUND</p>
+          <h2 id="education-title">Education</h2>
+        </div>
+        <span class="section-index">04 DEGREES / PROGRAMS</span>
+      </div>
+      <p class="about-education-intro">My academic background spans computer science, business analytics, leadership, and clinical laboratory technology.</p>
+      <ol class="education-list">
+        <li class="education-card">
+          <span class="education-number">01</span>
+          <div class="education-info">
+            <span class="education-school">Texas A&amp;M University–Corpus Christi</span>
+            <h3>Master of Science (MS), Computer Science</h3>
+            <span class="education-description">Graduate program in progress</span>
+          </div>
+          <span class="education-status">IN PROGRESS</span>
         </li>
-        <li class="bg-zinc-900/60 border border-zinc-800 p-4 rounded-xl text-zinc-300">
-          <span class="text-white font-semibold block mb-1">Master of Business Administration (MBA) in Business Analytics</span>
-          Texas A&M University-Corpus Christi <span class="text-zinc-500">(4.0 GPA)</span>
+        <li class="education-card">
+          <span class="education-number">02</span>
+          <div class="education-info">
+            <span class="education-school">Texas A&amp;M University–Corpus Christi</span>
+            <h3>Master of Business Administration (MBA)</h3>
+            <p class="education-description">Business Analytics &amp; Healthcare Administration</p>
+            <span class="education-gpa">GPA 4.0</span>
+          </div>
+          <span class="education-status">EXPECTED 2027</span>
         </li>
-        <li class="bg-zinc-900/60 border border-zinc-800 p-4 rounded-xl text-zinc-300">
-          <span class="text-white font-semibold block mb-1">Associate of Applied Science (AAS) in Medical Laboratory Technology</span>
-          Del Mar College <span class="text-zinc-500">(TACLS Student Bowl 3rd Place)</span>
+        <li class="education-card">
+          <span class="education-number">03</span>
+          <div class="education-info">
+            <span class="education-school">Del Mar College</span>
+            <h3>Bachelor of Applied Science (BAS)</h3>
+            <p class="education-description">Management &amp; Leadership</p>
+            <span class="education-honors">Dean’s List · President’s List</span>
+          </div>
+          <span class="education-status">2025</span>
         </li>
+        <li class="education-card">
+          <span class="education-number">04</span>
+          <div class="education-info">
+            <span class="education-school">Del Mar College</span>
+            <h3>Associate of Applied Science (AAS)</h3>
+            <p class="education-description">Medical Laboratory Technology</p>
+          </div>
+          <span class="education-status">2024</span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="about-certifications" aria-labelledby="certifications-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PROFESSIONAL LEARNING</p>
+          <h2 id="certifications-title">Certifications</h2>
+        </div>
+      </div>
+      <ul class="certification-list">
+        <li><span class="certification-icon" aria-hidden="true">↗</span><div><strong>IBM Business Analyst Professional Certificate</strong><span>IBM</span></div><span class="certification-date">2025</span></li>
+        <li><span class="certification-icon" aria-hidden="true">↗</span><div><strong>Google Project Management Certificate</strong><span>Google</span></div><span class="certification-date">2025</span></li>
       </ul>
     </section>
   </div>
