@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Gear & Setup | Cain Anthony Macias">
+  <nav class="flex items-center justify-between py-6 mb-12 border-b border-zinc-800/60">
+    <a href="/" class="font-semibold text-white tracking-tight flex items-center gap-2">
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
+      Cain Macias
+    </a>
+    <div class="flex items-center gap-5 text-sm text-zinc-400 font-medium">
+      <a href="/" class="hover:text-white transition-colors">Home</a>
+      <a href="/projects" class="hover:text-white transition-colors">Projects</a>
+      <a href="/gear" class="text-white transition-colors">Gear</a>
+      <a href="/about" class="hover:text-white transition-colors">About</a>
+      <a href="mailto:cainmacias69@gmail.com" class="hover:text-white transition-colors">Contact</a>
+    </div>
+  </nav>
+
+  <header class="mb-12">
+    <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">Setup & Gear</h1>
+    <p class="text-zinc-400">The hardware, mobile devices, and daily tools I use for software engineering and systems development.</p>
+  </header>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Desktop Rig -->
+    <div class="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl">
+      <div class="aspect-video bg-zinc-950 rounded-xl mb-4 overflow-hidden border border-zinc-800">
+        <img src="/images/gear/desktop.jpg" alt="Custom Desktop PC" class="w-full h-full object-cover" />
+      </div>
+      <h2 class="text-lg font-bold text-white mb-1">Custom Development Desktop</h2>
+      <p class="text-xs font-mono text-blue-400 mb-3">Primary Workstation & Local Build Rig</p>
+      <p class="text-sm text-zinc-400">
+        Powered by an AMD Ryzen 7 9700X paired with an NVIDIA GeForce RTX 5080 GPU, optimized for running local AI models, heavy compilation, and data pipelines.
+      </p>
+    </div>
+
+    <!-- Mobile Laptop -->
+    <div class="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl">
+      <div class="aspect-video bg-zinc-950 rounded-xl mb-4 overflow-hidden border border-zinc-800">
+        <img src="/images/gear/laptop.jpg" alt="ASUS ROG Zephyrus G14" class="w-full h-full object-cover" />
+      </div>
+      <h2 class="text-lg font-bold text-white mb-1">ASUS ROG Zephyrus G14</h2>
+      <p class="text-xs font-mono text-blue-400 mb-3">Mobile Engineering Laptop</p>
+      <p class="text-sm text-zinc-400">
+        Equipped with an AMD Ryzen AI 9 HX 370 processor and NVIDIA GeForce RTX 5070 Ti for high-performance mobile development and remote systems management.
+      </p>
+    </div>
+
+    <!-- Handheld & XR -->
+    <div class="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl">
+      <div class="aspect-video bg-zinc-950 rounded-xl mb-4 overflow-hidden border border-zinc-800">
+        <img src="/images/gear/xr.jpg" alt="VITURE Glasses & ROG Ally" class="w-full h-full object-cover" />
+      </div>
+      <h2 class="text-lg font-bold text-white mb-1">VITURE XR Glasses & ROG Ally</h2>
+      <p class="text-xs font-mono text-blue-400 mb-3">Extended Reality & Mobile Compute</p>
+      <p class="text-sm text-zinc-400">
+        VITURE Luma Pro / Beast XR wearable display glasses paired with an AMD Ryzen Z1 Extreme ROG Ally handheld console for mobile workspace expansion.
+      </p>
+    </div>
+
+    <!-- Tablet / Peripherals -->
+    <div class="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl">
+      <div class="aspect-video bg-zinc-950 rounded-xl mb-4 overflow-hidden border border-zinc-800">
+        <img src="/images/gear/tablet.jpg" alt="iPad Air" class="w-full h-full object-cover" />
+      </div>
+      <h2 class="text-lg font-bold text-white mb-1">Apple iPad Air (5th Gen)</h2>
+      <p class="text-xs font-mono text-blue-400 mb-3">Diagramming & Notes</p>
+      <p class="text-sm text-zinc-400">
+        Paired with Apple Pencil (2nd Gen) for architecture sketching, workflow diagrams, and technical planning sessions.
+      </p>
+    </div>
+  </div>
+</Layout>
