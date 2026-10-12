@@ -3,11 +3,12 @@ import Layout from '../layouts/Layout.astro';
 
 const projects = [
   {
-    title: 'JEANSRS.OPS — Operations & Integration Hub',
-    description: 'An operations-focused integration initiative connecting ERP data, pricing workflows, CRM processes, and approval-based automation.',
+    title: 'JEANSRS.OPS — Connected Operations Platform',
+    featured: true,
+    description: 'A React and TypeScript operations platform connecting ERP data, manufacturer catalogs, business workflows, and human-supervised AI tools.',
     href: '/projects/jeansrs-ops',
-    label: 'Enterprise systems',
-    technologies: ['Epicor Eclipse', 'CRM', 'AI workflows'],
+    label: 'Current build',
+    technologies: ['React + TypeScript', 'Supabase', 'ERP + AI'],
   },
   {
     title: 'Python Automation & Reconciliation',
@@ -76,6 +77,7 @@ const projects = [
           <a class="project-card" href={project.href}>
             <span class="project-card-number">{String(index + 1).padStart(2, '0')}</span>
             <div class="project-card-body">
+              {project.featured && <span class="project-card-featured"><span class="status-dot"></span> FEATURED CASE STUDY</span>}
               <div class="project-card-heading">
                 <h3>{project.title}</h3>
                 <span class="project-card-arrow" aria-hidden="true">↗</span>
