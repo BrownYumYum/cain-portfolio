@@ -351,3 +351,41 @@ article td { color: var(--muted); font-family: 'DM Mono', ui-monospace, monospac
   .case-architecture { padding: 15px; }
   .project-cards > li:first-child .project-card { padding-left: 10px; padding-right: 10px; }
 }
+
+
+/* Education & certifications from current resume */
+.about-education, .about-certifications { max-width: 100%; }
+.about-education .section-heading, .about-certifications .section-heading { margin-bottom: 16px; }
+.about-education-intro, .education-home-intro { max-width: 690px; margin: 0 0 21px; color: var(--muted); font-size: 13px; line-height: 1.9; }
+.education-list { display: grid; grid-template-columns: minmax(0,1fr); gap: 12px; margin: 0; padding: 0; list-style: none; }
+.education-card { display: grid; grid-template-columns: 30px minmax(0,1fr) auto; gap: 14px; align-items: start; min-width: 0; padding: 22px 21px; border: 1px solid rgba(125,183,255,.2); border-radius: 11px; background: linear-gradient(118deg, rgba(25,41,59,.78), rgba(13,22,34,.87)); transition: border-color .18s ease, background .18s ease; }
+.education-card:hover { border-color: rgba(125,183,255,.45); background: rgba(28,47,67,.78); }
+.education-number { padding-top: 3px; color: #738fa8; font-family: 'DM Mono',ui-monospace,monospace; font-size: 10px; }
+.education-info { min-width: 0; }
+.education-school { display: block; margin: 0 0 8px; color: #88bde9; font-family: 'DM Mono',ui-monospace,monospace; font-size: 10px; line-height: 1.6; letter-spacing: .02em; }
+.education-info h3 { margin: 0 0 7px; color: #eff6fd; font-size: clamp(15px,2.2vw,18px); font-weight: 600; line-height: 1.45; letter-spacing: -.035em; }
+.education-description { display: block; margin: 0 0 8px; color: #b2c3d6; font-size: 12px; line-height: 1.7; }
+.education-gpa, .education-honors { display: inline-flex; margin-top: 3px; padding: 5px 9px; border: 1px solid rgba(142,228,194,.24); border-radius: 5px; color: var(--mint); background: rgba(142,228,194,.045); font-family: 'DM Mono',monospace; font-size: 10px; line-height: 1.4; }
+.education-status { padding: 6px 8px; border: 1px solid rgba(125,183,255,.19); border-radius: 5px; color: #a0b5c9; white-space: nowrap; font-family: 'DM Mono',ui-monospace,monospace; font-size: 9px; letter-spacing: .04em; }
+.about-certifications { margin-top: 42px; }
+.certification-list { margin: 0; padding: 0; list-style: none; }
+.certification-list li { display: flex; align-items: center; gap: 14px; padding: 17px 4px; border-top: 1px solid var(--line); }
+.certification-list li:last-child { border-bottom: 1px solid var(--line); }
+.certification-icon { display: grid; place-items: center; flex: 0 0 31px; height: 31px; border: 1px solid rgba(142,228,194,.3); border-radius: 8px; color: var(--mint); font-size: 16px; }
+.certification-list li > div { display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0; gap: 3px; }
+.certification-list strong { color: #e8f3fd; font-size: 13px; font-weight: 550; line-height: 1.5; }
+.certification-list li > div > span { color: var(--muted); font-size: 11px; }
+.certification-date { color: var(--faint); font-family: 'DM Mono',monospace; font-size: 10px; }
+.education-home .section-heading { margin-bottom: 14px; }
+.education-home-intro { margin-bottom: 19px; }
+.education-home-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 11px; }
+.education-home-item { display: flex; flex-direction: column; min-width: 0; gap: 6px; min-height: 129px; padding: 19px; border: 1px solid var(--line); border-radius: 9px; background: rgba(16,24,36,.66); }
+.education-home-degree { color: #eaf3fc; font-size: 13px; font-weight: 600; line-height: 1.55; letter-spacing: -.025em; }
+.education-home-place { color: #a7b9cc; font-size: 11px; line-height: 1.7; }
+.education-home-meta { display: block; margin-top: auto; padding-top: 4px; color: var(--mint); font-family: 'DM Mono',monospace; font-size: 9px; line-height: 1.55; letter-spacing: .025em; }
+@media(max-width: 650px) {
+  .education-home-grid { grid-template-columns: 1fr; }
+  .education-home-item { min-height: 0; padding: 17px; }
+  .education-card { grid-template-columns: 23px minmax(0,1fr); gap: 10px; padding: 18px; }
+  .education-status { grid-column: 2; justify-self: start; margin-top: 1px; }
+}
