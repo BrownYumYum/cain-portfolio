@@ -1,0 +1,29 @@
+---
+const pathname = Astro.url.pathname;
+const links = [
+  { href: '/', label: 'home', active: pathname === '/' },
+  { href: '/projects', label: 'work', active: pathname.startsWith('/projects') },
+  { href: '/about', label: 'about', active: pathname.startsWith('/about') },
+  { href: '/gear', label: 'gear', active: pathname.startsWith('/gear') },
+];
+---
+<header class="ref-site-header">
+  <nav class="ref-nav" aria-label="Main navigation">
+    <a href="/" class="ref-brand" aria-label="Cain Macias — home">
+      <span class="ref-brand-mark" aria-hidden="true">cm<span>.</span></span>
+      <span class="ref-brand-name">Cain Macias</span>
+    </a>
+    <div class="ref-nav-links">
+      {links.map(link => (
+        <a href={link.href} class:list={['ref-nav-link', { 'is-active': link.active }]} aria-current={link.active ? 'page' : undefined}>{link.label}</a>
+      ))}
+    </div>
+    <div class="ref-nav-actions">
+      <a class="ref-nav-linkedin" href="https://www.linkedin.com/in/cain-macias-a69801306/" target="_blank" rel="noopener noreferrer" aria-label="Cain Macias on LinkedIn" title="LinkedIn">in<span aria-hidden="true">↗</span></a>
+      <button class="ref-theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme" data-theme-toggle>
+        <svg class="ref-theme-moon" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 13A9 9 0 0 1 11 3.2 9 9 0 1 0 20.8 13z"/></svg>
+        <svg class="ref-theme-sun" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
