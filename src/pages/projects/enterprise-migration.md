@@ -1,19 +1,20 @@
 ---
-layout: ../../layouts/Layout.astro
+layout: ../../layouts/ProjectLayout.astro
+title: "Enterprise System Migration & Data Audit"
+description: "Python-based data audits, transformation workflows, and reconciliation for enterprise system migration."
+category: "ERP & data migration"
 ---
-
-[← Back to Systems](/projects)
 
 # Enterprise ERP Migration: Epicor Eclipse Implementation & Data Audit
 
-<div class="bg-zinc-900 border border-zinc-800 rounded-lg p-6 my-8">
+<aside class="case-study-highlights">
   <h3 class="text-white mt-0 mb-4">The TL;DR Metrics</h3>
   <ul class="mb-0">
     <li><strong>Zero Downtime:</strong> Executed the system cutover with zero disruption to active wholesale and distribution operations.</li>
     <li><strong>Data Parity:</strong> Achieved 100% reconciliation across inventory, customer profiles, and financial records.</li>
     <li><strong>Risk Mitigation:</strong> Engineered a pre-migration audit that successfully identified, flagged, and resolved historical data anomalies before they hit production.</li>
   </ul>
-</div>
+</aside>
 
 ## Problem
 Transitioning enterprise operations to Epicor Eclipse required migrating years of legacy operational data. The primary risk was data corruption, mismatched database schemas, or the loss of critical inventory histories during the switch. Any failure in this data pipeline would result in immediate, severe operational bottlenecks on the warehouse floor and impact revenue generation.
