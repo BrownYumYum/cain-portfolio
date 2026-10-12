@@ -152,3 +152,52 @@ article td { color: var(--muted); font-family: 'DM Mono', ui-monospace, monospac
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
 }
+
+
+/* Project index: override the homepage's multi-column project rows. */
+.project-list { border-top: 1px solid var(--line); }
+.project-list li { padding: 0; }
+.project-list li > a {
+  display: flex; align-items: center; justify-content: space-between; gap: 22px;
+  padding: 24px 4px 8px; width: 100%;
+}
+.project-list .work-name { display: block; flex: 1 1 auto; min-width: 0; max-width: none; font-size: 17px; font-weight: 600; line-height: 1.45; letter-spacing: -.025em; overflow-wrap: normal; }
+.project-list .work-meta { flex: 0 1 auto; max-width: 250px; font-size: 10px; white-space: normal; line-height: 1.6; }
+.project-list .work-arrow { flex: 0 0 auto; width: 18px; font-size: 16px; }
+.project-list .project-summary { max-width: 690px; margin: 0 0 23px 4px; padding-right: 0; font-size: 13px; line-height: 1.85; }
+.project-list li:hover { background: rgba(125,183,255,.035); }
+.project-list li:hover .work-name { color: var(--blue); }
+
+/* Markdown case studies: Astro renders the page's markdown into the Layout slot,
+   not an <article>, so generic article selectors never applied. */
+.project-detail-shell { width: min(100% - 48px, 820px); padding-top: 44px; padding-bottom: 80px; }
+.project-detail-shell > p:first-child { margin: 0 0 35px; }
+.project-detail-shell > p:first-child a { display: inline-flex; align-items: center; color: var(--blue); font-size: 13px; text-decoration: none; }
+.project-detail-shell > p:first-child a:hover { text-decoration: underline; }
+.project-detail-shell > h1 { max-width: 780px; margin: 0 0 35px; padding-bottom: 28px; border-bottom: 1px solid var(--line); color: #f4f8ff; font-size: clamp(30px, 5vw, 44px); font-weight: 650; line-height: 1.18; letter-spacing: -.055em; }
+.project-detail-shell > h2 { margin: 43px 0 17px; padding-bottom: 11px; border-bottom: 1px solid var(--line); color: #f0f6ff; font-size: clamp(21px, 3vw, 26px); font-weight: 600; letter-spacing: -.04em; line-height: 1.35; }
+.project-detail-shell > h3 { margin: 29px 0 12px; color: var(--blue); font-size: 17px; font-weight: 600; line-height: 1.45; }
+.project-detail-shell > p, .project-detail-shell > ul, .project-detail-shell > ol { max-width: 760px; margin: 0 0 21px; color: #b7c4d5; font-size: 15px; line-height: 1.95; }
+.project-detail-shell > ul, .project-detail-shell > ol { padding-left: 25px; }
+.project-detail-shell li { padding-left: 5px; margin-bottom: 11px; }
+.project-detail-shell li::marker { color: var(--blue); }
+.project-detail-shell strong { color: #edf4fd; font-weight: 650; }
+.project-detail-shell code { padding: 2px 5px; border-radius: 4px; background: rgba(125,183,255,.09); color: #a8d1ff; font-family: 'DM Mono', ui-monospace, monospace; font-size: .88em; overflow-wrap: anywhere; }
+.project-detail-shell pre { max-width: 100%; margin: 24px 0; padding: 20px; overflow-x: auto; border: 1px solid var(--line); border-radius: 9px; background: #0b1420; }
+.project-detail-shell pre code { padding: 0; background: none; color: #c8d9ec; font-size: 12px; line-height: 1.7; }
+.project-detail-shell img { display: block; max-width: 100%; height: auto; margin: 22px auto; border: 1px solid var(--line); border-radius: 9px; }
+.project-detail-shell hr { height: 1px; margin: 44px 0; border: 0; background: var(--line); }
+.project-detail-shell a:not(:first-child) { text-underline-offset: 4px; }
+.project-detail-shell blockquote { margin: 22px 0; padding: 10px 20px; border-left: 3px solid var(--blue); background: rgba(125,183,255,.05); }
+.project-detail-shell table { width: 100%; margin: 22px 0; border-collapse: collapse; display: block; overflow-x: auto; }
+.project-detail-shell th, .project-detail-shell td { padding: 11px 14px; border-bottom: 1px solid var(--line); text-align: left; }
+@media (max-width: 560px) {
+  .project-list li > a { align-items: flex-start; flex-wrap: wrap; gap: 8px 12px; padding-top: 21px; }
+  .project-list .work-name { flex: 1 1 calc(100% - 34px); font-size: 16px; }
+  .project-list .work-arrow { order: 1; }
+  .project-list .work-meta { order: 2; flex-basis: 100%; max-width: none; text-align: left; }
+  .project-list .project-summary { margin-bottom: 19px; font-size: 12px; }
+  .project-detail-shell { width: min(100% - 36px, 820px); padding-top: 28px; }
+  .project-detail-shell > h1 { font-size: 31px; }
+  .project-detail-shell > p, .project-detail-shell > ul, .project-detail-shell > ol { font-size: 14px; line-height: 1.85; }
+}
