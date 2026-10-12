@@ -1,8 +1,9 @@
 ---
-layout: ../../layouts/Layout.astro
+layout: ../../layouts/ProjectLayout.astro
+title: "B2B Ordering & Fulfillment Platform"
+description: "Django-based ordering workflows, contract pricing, and infrastructure for institutional customers."
+category: "Web applications"
 ---
-
-[← Back to Systems](/projects)
 
 # Enterprise B2B Ordering & Fulfillment Platform
 
