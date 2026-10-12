@@ -1,9 +1,9 @@
 ---
-layout: ../../layouts/Layout.astro
-title: "JEANSRS.OPS — Central Operations & AI Hub | Cain Anthony Macias"
+layout: ../../layouts/ProjectLayout.astro
+title: "JEANSRS.OPS — Central Operations, Visibility & AI"
+description: "An enterprise operations integration initiative connecting ERP, quoting, CRM, and field workflows."
+category: "Enterprise integration"
 ---
-
-[← Back to Projects](/projects)
 
 # JEANSRS.OPS — Central Operations, Visibility & Autonomous AI Layer
 
