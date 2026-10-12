@@ -2,98 +2,76 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout
-  title="Cain Macias — Systems, Software & Automation"
-  description="The personal site of Cain Macias, an operations-minded systems builder working across enterprise software, integrations, and automation."
+  title="Cain Macias — Business Systems & Automation"
+  description="Cain Macias builds practical business systems, enterprise integrations, and Python automation from South Texas."
 >
   <header class="site-header">
-    <a class="site-name" href="/" aria-label="Cain Macias home">cain macias<span class="name-period">.</span></a>
+    <a class="site-name" href="/" aria-label="Cain Macias home"><span class="brand-mark">c<span>.</span></span> cain macias</a>
     <nav aria-label="Main navigation" class="site-nav">
       <a href="/projects">work</a>
       <a href="/about">about</a>
       <a href="/gear">gear</a>
+      <a class="nav-contact" href="mailto:cainmacias69@gmail.com">let’s talk <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
-  <section class="intro" aria-labelledby="intro-title">
-    <p class="eyebrow">south texas · systems & software</p>
-    <h1 id="intro-title">hello, Cain here<span class="name-period">.</span></h1>
-    <p class="intro-copy">
-      I’m an operations-minded builder documenting what I learn while making business systems work better. Most of my time is spent somewhere between software, data, and the day-to-day problems people need technology to solve.
-    </p>
-    <p class="intro-copy muted-copy">
-      By day, I work with enterprise tools and workflows. Outside of that, I build integrations, automate repetitive work, and keep learning about the systems behind the screen.
-    </p>
-    <div class="inline-links">
-      <a href="mailto:cainmacias69@gmail.com">say hello <span aria-hidden="true">↗</span></a>
-      <a href="/projects">see what I’m building <span aria-hidden="true">↗</span></a>
+  <section class="hero" aria-labelledby="intro-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="status-dot"></span> SOUTH TEXAS · BUSINESS SYSTEMS & SOFTWARE</p>
+      <h1 id="intro-title">I make business systems <span>work better.</span></h1>
+      <p class="intro-copy">Hey, I’m Cain — an operations-minded systems builder working across enterprise software, data, integrations, and automation. I like finding the friction in a workflow and building something practical to remove it.</p>
+      <div class="hero-actions">
+        <a class="primary-link" href="/projects">Explore my work <span aria-hidden="true">↗</span></a>
+        <a class="secondary-link" href="mailto:cainmacias69@gmail.com">Get in touch</a>
+      </div>
+      <div class="hero-tags">
+        <span>Enterprise systems</span><span>Python automation</span><span>Data & integrations</span>
+      </div>
     </div>
+    <aside class="hero-visual">
+      <div class="portrait-frame">
+        <img src="/profile.jpg" alt="Portrait of Cain Anthony Macias" class="profile-photo" />
+        <span class="portrait-corner portrait-corner-tl"></span><span class="portrait-corner portrait-corner-br"></span>
+      </div>
+      <div class="portrait-caption"><span class="caption-line"></span><span>BUILDING USEFUL THINGS, ONE WORKFLOW AT A TIME</span></div>
+      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+    </aside>
+  </section>
+
+  <section class="featured-panel" aria-labelledby="featured-title">
+    <div class="featured-topline"><span class="eyebrow">CURRENTLY BUILDING</span><span class="status-pill"><span class="status-dot"></span> Systems in motion</span></div>
+    <div class="featured-content">
+      <div>
+        <h2 id="featured-title">Connecting the tools behind the work.</h2>
+        <p>From ERP and CRM data to vendor pricing and customer ordering, I focus on making disconnected systems more useful together — with automation that saves time and makes information easier to trust.</p>
+      </div>
+      <div class="featured-stamp"><span>SYS</span><span>001</span><span class="stamp-line"></span><span>OPS / DATA</span></div>
+    </div>
+    <div class="tech-tags"><span>Epicor Eclipse</span><span>HubSpot</span><span>ProKeep</span><span>Python</span><span>Django</span><span>AWS</span></div>
   </section>
 
   <section class="content-section" aria-labelledby="now-title">
-    <div class="section-heading">
-      <h2 id="now-title">now</h2>
-      <span class="section-note">what I’m focused on</span>
+    <div class="section-heading"><div><p class="eyebrow">THE SHORT VERSION</p><h2 id="now-title">What I’m focused on</h2></div><span class="section-index">01 / FOCUS</span></div>
+    <div class="focus-grid">
+      <article class="focus-card"><span class="card-number">01</span><span class="focus-icon">↔</span><h3>Systems integration</h3><p>Helping ERP, CRM, and operations platforms share cleaner data and support real business workflows.</p></article>
+      <article class="focus-card"><span class="card-number">02</span><span class="focus-icon">⌘</span><h3>Automation & data quality</h3><p>Building Python tools for catalog reconciliation, change detection, validation, and repeatable reporting.</p></article>
+      <article class="focus-card"><span class="card-number">03</span><span class="focus-icon">▤</span><h3>Practical software</h3><p>Developing web tools and internal workflows with an emphasis on usability, maintainability, and measurable value.</p></article>
     </div>
-    <ul class="plain-list">
-      <li>
-        <span class="list-title">Enterprise systems</span>
-        <span class="list-detail">Connecting ERP, CRM, pricing, and operations workflows so information moves with less manual effort.</span>
-      </li>
-      <li>
-        <span class="list-title">Automation & data</span>
-        <span class="list-detail">Building Python tools for catalog cleanup, change detection, data validation, and repeatable reporting.</span>
-      </li>
-      <li>
-        <span class="list-title">Learning</span>
-        <span class="list-detail">MBA candidate focused on business analytics and healthcare administration.</span>
-      </li>
-    </ul>
   </section>
 
-  <section class="content-section" aria-labelledby="work-title">
-    <div class="section-heading">
-      <h2 id="work-title">selected work</h2>
-      <a class="subtle-link" href="/projects">all projects ↗</a>
-    </div>
+  <section class="content-section work-section" aria-labelledby="work-title">
+    <div class="section-heading"><div><p class="eyebrow">SELECTED PROJECTS</p><h2 id="work-title">A few things I’ve worked on</h2></div><a class="subtle-link" href="/projects">All projects <span aria-hidden="true">↗</span></a></div>
     <ul class="work-list">
-      <li>
-        <a href="/projects/python-automation-engine">
-          <span class="work-name">Python automation & reconciliation</span>
-          <span class="work-meta">automation · data quality</span>
-          <span class="work-arrow" aria-hidden="true">↗</span>
-        </a>
-      </li>
-      <li>
-        <a href="/projects/enterprise-migration">
-          <span class="work-name">Enterprise system migration</span>
-          <span class="work-meta">ETL · systems integration</span>
-          <span class="work-arrow" aria-hidden="true">↗</span>
-        </a>
-      </li>
-      <li>
-        <a href="/projects/b2b-ordering-platform">
-          <span class="work-name">B2B ordering platform</span>
-          <span class="work-meta">Django · PostgreSQL · AWS</span>
-          <span class="work-arrow" aria-hidden="true">↗</span>
-        </a>
-      </li>
+      <li><a href="/projects/python-automation-engine"><span class="work-number">01</span><span class="work-main"><span class="work-name">Python automation & reconciliation</span><span class="work-description">Vendor pricing checks, catalog matching, and automated reporting.</span></span><span class="work-meta">AUTOMATION</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
+      <li><a href="/projects/enterprise-migration"><span class="work-number">02</span><span class="work-main"><span class="work-name">Enterprise system migration</span><span class="work-description">Moving operational records between business platforms with audit checks.</span></span><span class="work-meta">INTEGRATION</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
+      <li><a href="/projects/b2b-ordering-platform"><span class="work-number">03</span><span class="work-main"><span class="work-name">B2B ordering platform</span><span class="work-description">Account-based ordering, tiered pricing, and web application infrastructure.</span></span><span class="work-meta">WEB APP</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
     </ul>
   </section>
 
-  <section class="content-section connect-section" aria-labelledby="connect-title">
-    <div class="section-heading">
-      <h2 id="connect-title">around the web</h2>
-    </div>
-    <p class="section-copy">If you’re working on interesting systems, building something useful, or just want to talk shop, feel free to reach out.</p>
-    <div class="inline-links">
-      <a href="mailto:cainmacias69@gmail.com">email <span aria-hidden="true">↗</span></a>
-      <a href="https://github.com/BrownYumYum" target="_blank" rel="noreferrer">github <span aria-hidden="true">↗</span></a>
-      <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">linkedin <span aria-hidden="true">↗</span></a>
-    </div>
+  <section class="closing-panel">
+    <div><p class="eyebrow">HAVE A GOOD PROBLEM?</p><h2>Let’s build something useful.</h2><p>I’m always happy to talk systems, automation, analytics, and better ways to get work done.</p></div>
+    <a class="primary-link" href="mailto:cainmacias69@gmail.com">Say hello <span aria-hidden="true">↗</span></a>
   </section>
 
-  <footer class="site-footer">
-    <span>© 2026 Cain Macias</span>
-    <span>made with curiosity in Texas</span>
-  </footer>
+  <footer class="site-footer"><span>© 2026 Cain Macias</span><span>Made with curiosity in Texas <span class="footer-spark">✳</span></span><div><a href="https://github.com/BrownYumYum" target="_blank" rel="noreferrer">GitHub ↗</a><a href="mailto:cainmacias69@gmail.com">Email ↗</a></div></footer>
 </Layout>
