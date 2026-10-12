@@ -25,6 +25,7 @@ const {
     <link rel="me" href="https://www.linkedin.com/in/cain-macias-a69801306/" />
     <title>{title}</title>
     <script is:inline>
+      document.documentElement.classList.add('has-js');
       try {
         document.documentElement.dataset.theme = localStorage.getItem('cain-theme') === 'light' ? 'light' : 'dark';
       } catch (_) {
