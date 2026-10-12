@@ -1,69 +1,68 @@
+---
 import Layout from '../layouts/Layout.astro';
 ---
+
 <Layout title="Cain Anthony Macias | Software Engineer & Systems Architect">
-  <main class="max-w-4xl mx-auto px-4 py-20">
+  <header class="mb-16">
+    <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+      Cain Anthony Macias
+    </h1>
+    <h2 class="text-2xl md:text-3xl text-blue-400 font-medium mb-6">
+      Software Engineer & Systems Architect
+    </h2>
+    <p class="text-lg text-zinc-400 leading-relaxed max-w-2xl mb-8">
+      I design and build enterprise production systems — including <span class="text-zinc-200 font-semibold">JEANSRS.OPS</span>, a centralized operations and autonomous AI agent hub linking legacy Epicor Eclipse ERP with modern sales, federal GSA compliance, logistics APIs, and field workflows. Skilled at orchestrating multi-agent AI teams and robust Python/Node.js pipelines to eliminate manual overhead. Currently an MBA candidate in Business Analytics.
+    </p>
     
-    <header class="mb-16">
-      <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
-        Cain Anthony Macias
-      </h1>
-      <h2 class="text-2xl md:text-3xl text-blue-400 font-medium mb-6">
-        Software Engineer & Systems Architect
-      </h2>
-      <p class="text-lg text-zinc-400 leading-relaxed max-w-2xl mb-8">
-        I design and build enterprise production systems — including <strong class="text-zinc-200">JEANSRS.OPS</strong>, a centralized operations and autonomous AI agent hub linking legacy Epicor Eclipse ERP with modern sales, federal GSA compliance, logistics APIs, and field workflows. Skilled at orchestrating multi-agent AI teams and robust Python/Node.js pipelines to eliminate manual overhead. Currently an MBA candidate in Business Analytics.
+    <div class="flex flex-wrap gap-4">
+      <a href="/projects" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+        View Projects
+      </a>
+      <a href="mailto:cainmacias69@gmail.com" class="bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+        Contact Me
+      </a>
+    </div>
+  </header>
+
+  <section class="border-t border-zinc-800 pt-12 mb-12">
+    <h3 class="text-sm font-bold text-zinc-500 uppercase tracking-wider mb-6">Featured Ecosystem</h3>
+    <div class="bg-zinc-900/50 border border-zinc-800 p-6 rounded-xl text-zinc-300">
+      <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+        <h4 class="text-xl font-bold text-white">JEANSRS.OPS — Central Operations & Autonomous AI Hub</h4>
+        <span class="font-mono text-xs text-blue-400 bg-blue-950/50 border border-blue-800/50 px-3 py-1 rounded-full w-fit">Production Active</span>
+      </div>
+      <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+        An end-to-end integration platform bridging legacy Epicor Eclipse ERP with AutoQuotes pricing sync, federal GSA MAS compliance reporting, HubSpot CRM, XPO/Eniture logistics, and a dedicated multi-agent AI operations hub powered by Claude with human-in-the-loop approval workflows.
       </p>
-      
-      <div class="flex flex-wrap gap-4">
-        <a href="/projects" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-          View Projects
-        </a>
-        <a href="mailto:cainmacias69@gmail.com" class="bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-          Contact Me
-        </a>
+      <div class="flex flex-wrap gap-2 font-mono text-xs">
+        <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">Python</span>
+        <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">Node.js / Express</span>
+        <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">Epicor Eclipse ERP</span>
+        <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">Claude AI Gateway</span>
+        <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">REST / XML APIs</span>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <section class="border-t border-zinc-800 pt-12 mb-12">
-      <h3 class="text-sm font-bold text-zinc-500 uppercase tracking-wider mb-6">Featured Ecosystem</h3>
-      <div class="bg-zinc-900/50 border border-zinc-800 p-6 rounded-xl text-zinc-300">
-        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
-          <h4 class="text-xl font-bold text-white">JEANSRS.OPS — Central Operations & Autonomous AI Hub</h4>
-          <span class="font-mono text-xs text-blue-400 bg-blue-950/50 border border-blue-800/50 px-3 py-1 rounded-full w-fit">Production Active</span>
-        </div>
-        <p class="text-sm text-zinc-400 leading-relaxed mb-4">
-          An end-to-end integration platform bridging legacy Epicor Eclipse ERP with AutoQuotes pricing sync, federal GSA MAS compliance reporting, HubSpot CRM, XPO/Eniture logistics, and a dedicated multi-agent AI operations hub powered by Claude with human-in-the-loop approval workflows.
-        </p>
-        <div class="flex flex-wrap gap-2 font-mono text-xs">
-          <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">Python</span>
-          <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">Node.js / Express</span>
-          <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">Epicor Eclipse ERP</span>
-          <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">Claude AI Gateway</span>
-          <span class="bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded">REST / XML APIs</span>
-        </div>
+  <section class="border-t border-zinc-800 pt-12">
+    <h3 class="text-sm font-bold text-zinc-500 uppercase tracking-wider mb-6">Core Stack</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-zinc-300 font-mono text-sm">
+      <div class="bg-zinc-900/50 border border-zinc-800 p-4 rounded-lg">
+        <span class="block text-blue-400 mb-1">Backend</span>
+        Python, Django, Node.js
       </div>
-    </section>
-
-    <section class="border-t border-zinc-800 pt-12">
-      <h3 class="text-sm font-bold text-zinc-500 uppercase tracking-wider mb-6">Core Stack</h3>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-zinc-300 font-mono text-sm">
-        <div class="bg-zinc-900/50 border border-zinc-800 p-4 rounded-lg">
-          <span class="block text-blue-400 mb-1">Backend</span>
-          Python, Django, Node.js
-        </div>
-        <div class="bg-zinc-900/50 border border-zinc-800 p-4 rounded-lg">
-          <span class="block text-blue-400 mb-1">Data & APIs</span>
-          REST, XML, MongoDB, Pandas
-        </div>
-        <div class="bg-zinc-900/50 border border-zinc-800 p-4 rounded-lg">
-          <span class="block text-blue-400 mb-1">AI & Cloud</span>
-          Claude Gateway, AWS, Linux
-        </div>
-        <div class="bg-zinc-900/50 border border-zinc-800 p-4 rounded-lg">
-          <span class="block text-blue-400 mb-1">Integrations</span>
-          HubSpot, Shopify, ERP
-        </div>
+      <div class="bg-zinc-900/50 border border-zinc-800 p-4 rounded-lg">
+        <span class="block text-blue-400 mb-1">Data & APIs</span>
+        REST, XML, MongoDB, Pandas
       </div>
-    </section>
-  </main>
+      <div class="bg-zinc-900/50 border border-zinc-800 p-4 rounded-lg">
+        <span class="block text-blue-400 mb-1">AI & Cloud</span>
+        Claude Gateway, AWS, Linux
+      </div>
+      <div class="bg-zinc-900/50 border border-zinc-800 p-4 rounded-lg">
+        <span class="block text-blue-400 mb-1">Integrations</span>
+        HubSpot, Shopify, ERP
+      </div>
+    </div>
+  </section>
 </Layout>
