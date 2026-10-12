@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About Me | Cain Anthony Macias">
+  <nav class="flex items-center justify-between py-6 mb-12 border-b border-zinc-800/60">
+    <a href="/" class="font-semibold text-white tracking-tight flex items-center gap-2">
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
+      Cain Macias
+    </a>
+    <div class="flex items-center gap-5 text-sm text-zinc-400 font-medium">
+      <a href="/" class="hover:text-white transition-colors">Home</a>
+      <a href="/projects" class="hover:text-white transition-colors">Projects</a>
+      <a href="/gear" class="hover:text-white transition-colors">Gear</a>
+      <a href="/about" class="text-white transition-colors">About</a>
+      <a href="mailto:cainmacias69@gmail.com" class="hover:text-white transition-colors">Contact</a>
+    </div>
+  </nav>
+
+  <header class="mb-12 max-w-2xl">
+    <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4">About Me & My Journey</h1>
+    <p class="text-lg text-zinc-300 leading-relaxed">
+      I’m an Operations Technology Analyst, Systems Engineer, and software builder based in Corpus Christi, Texas, focused on bridging complex legacy enterprise architectures with modern automation.
+    </p>
+  </header>
+
+  <div class="space-y-10 max-w-2xl text-zinc-400 leading-relaxed">
+    <section>
+      <h2 class="text-xl font-bold text-white mb-3">The Background & Journey</h2>
+      <p class="mb-4">
+        My professional path spans diverse operational environments—ranging from working as a Medical Lab Technician and serving with the United States Postal Service to managing warehouse operations. These operational roles taught me firsthand how manual data reconciliation, disconnected legacy databases, and workflow bottlenecks drain organizational productivity.
+      </p>
+      <p>
+        Driven by a desire to solve those bottlenecks at scale, I transitioned fully into software engineering and systems architecture. Today, I build automated pipelines, ERP integration layers, and autonomous AI tooling that eliminate thousands of hours of manual work.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-bold text-white mb-3">Education & Credentials</h2>
+      <ul class="space-y-3 font-mono text-sm">
+        <li class="bg-zinc-900/60 border border-zinc-800 p-4 rounded-xl text-zinc-300">
+          <span class="text-white font-semibold block mb-1">Master of Science (MS) in Computer Science</span>
+          Texas A&M University-Corpus Christi <span class="text-zinc-500">(In Progress, Expected 2027)</span>
+        </li>
+        <li class="bg-zinc-900/60 border border-zinc-800 p-4 rounded-xl text-zinc-300">
+          <span class="text-white font-semibold block mb-1">Master of Business Administration (MBA) in Business Analytics</span>
+          Texas A&M University-Corpus Christi <span class="text-zinc-500">(4.0 GPA)</span>
+        </li>
+        <li class="bg-zinc-900/60 border border-zinc-800 p-4 rounded-xl text-zinc-300">
+          <span class="text-white font-semibold block mb-1">Professional Certifications</span>
+          Google Project Manager & IBM Business Analyst
+        </li>
+      </ul>
+    </section>
+  </div>
+</Layout>
