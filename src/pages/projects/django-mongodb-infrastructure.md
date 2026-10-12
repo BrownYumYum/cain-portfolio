@@ -1,3 +1,10 @@
+---
+layout: ../../layouts/ProjectLayout.astro
+title: "Django & MongoDB Data Platform"
+description: "An API-driven catalog synchronization and pricing intelligence platform."
+category: "Data infrastructure"
+---
+
 # Enterprise Data & Pricing Intelligence Engine
 
 ## Overview
