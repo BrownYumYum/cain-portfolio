@@ -1,77 +1,109 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const projects = [
+  {
+    title: 'JEANSRS.OPS — Operations & Integration Hub',
+    description: 'An operations-focused integration initiative connecting ERP data, pricing workflows, CRM processes, and approval-based automation.',
+    href: '/projects/jeansrs-ops',
+    label: 'Enterprise systems',
+    technologies: ['Epicor Eclipse', 'CRM', 'AI workflows'],
+  },
+  {
+    title: 'Python Automation & Reconciliation',
+    description: 'Vendor catalog processing, change detection, and repeatable output generation designed to reduce manual reconciliation.',
+    href: '/projects/python-automation-engine',
+    label: 'Automation & data',
+    technologies: ['Python', 'Data quality', 'ETL'],
+  },
+  {
+    title: 'Enterprise System Migration',
+    description: 'Data transformation and parity checks for moving business records between legacy and modern systems.',
+    href: '/projects/enterprise-migration',
+    label: 'ERP & data migration',
+    technologies: ['Epicor', 'Python', 'Validation'],
+  },
+  {
+    title: 'B2B Ordering & Fulfillment Platform',
+    description: 'An account-based ordering experience with tiered pricing and backend workflows for institutional customers.',
+    href: '/projects/b2b-ordering-platform',
+    label: 'Web applications',
+    technologies: ['Django', 'PostgreSQL', 'AWS'],
+  },
+  {
+    title: 'Django & MongoDB Data Platform',
+    description: 'A catalog application exploring API-driven product data, inventory updates, and pricing analysis.',
+    href: '/projects/django-mongodb-infrastructure',
+    label: 'Data infrastructure',
+    technologies: ['Django', 'MongoDB', 'APIs'],
+  }
+];
 ---
 <Layout
   title="Selected Work — Cain Macias"
-  description="Selected systems, integrations, and automation projects by Cain Macias."
+  description="Enterprise integrations, data automation, and software case studies by Cain Macias."
 >
   <header class="site-header">
-    <a class="site-name" href="/">cain macias<span class="name-period">.</span></a>
+    <a class="site-name" href="/" aria-label="Cain Macias home">
+      <span class="brand-mark">c<span>.</span></span> cain macias
+    </a>
     <nav aria-label="Main navigation" class="site-nav">
       <a href="/projects" aria-current="page">work</a>
       <a href="/about">about</a>
       <a href="/gear">gear</a>
+      <a class="nav-contact" href="mailto:cainmacias69@gmail.com">let’s talk <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
-  <section class="intro" aria-labelledby="work-title">
-    <p class="eyebrow">selected projects · systems & software</p>
-    <h1 id="work-title">things I’ve worked on<span class="name-period">.</span></h1>
-    <p class="intro-copy muted-copy">A selection of business systems, data workflows, and software experiments. Each project focuses on solving a practical problem with maintainable tools.</p>
+  <section class="projects-hero" aria-labelledby="projects-title">
+    <p class="eyebrow"><span class="status-dot"></span> SELECTED WORK / SYSTEMS & SOFTWARE</p>
+    <h1 id="projects-title">Things I’ve <span>built & improved.</span></h1>
+    <p>Enterprise integrations, useful software, and data workflows. Each case study explores a problem, the approach I took, and the technology behind the work.</p>
+    <div class="projects-hero-meta">
+      <span>05 CASE STUDIES</span>
+      <span>ENGINEERING · OPERATIONS · DATA</span>
+    </div>
   </section>
 
-  <section class="content-section" aria-label="Project list">
-    <ul class="work-list project-list">
-      <li>
-        <a href="/projects/jeansrs-ops">
-          <span class="work-name">JEANSRS.OPS — Operations & integration hub</span>
-          <span class="work-meta">enterprise systems · AI workflows</span>
-          <span class="work-arrow" aria-hidden="true">↗</span>
-        </a>
-        <p class="project-summary">An operations-focused integration initiative connecting ERP data, pricing workflows, CRM processes, and approval-based automation.</p>
-      </li>
-      <li>
-        <a href="/projects/python-automation-engine">
-          <span class="work-name">Python automation & reconciliation</span>
-          <span class="work-meta">Python · data quality</span>
-          <span class="work-arrow" aria-hidden="true">↗</span>
-        </a>
-        <p class="project-summary">Vendor catalog processing, change detection, and repeatable output generation designed to reduce manual reconciliation.</p>
-      </li>
-      <li>
-        <a href="/projects/enterprise-migration">
-          <span class="work-name">Enterprise system migration</span>
-          <span class="work-meta">ETL · validation</span>
-          <span class="work-arrow" aria-hidden="true">↗</span>
-        </a>
-        <p class="project-summary">Data transformation and parity checks for moving business records between legacy and modern systems.</p>
-      </li>
-      <li>
-        <a href="/projects/b2b-ordering-platform">
-          <span class="work-name">B2B ordering & fulfillment platform</span>
-          <span class="work-meta">Django · PostgreSQL · AWS</span>
-          <span class="work-arrow" aria-hidden="true">↗</span>
-        </a>
-        <p class="project-summary">An account-based ordering experience with tiered pricing and backend workflows for institutional customers.</p>
-      </li>
-      <li>
-        <a href="/projects/django-mongodb-infrastructure">
-          <span class="work-name">Django & MongoDB catalog platform</span>
-          <span class="work-meta">Django · MongoDB · APIs</span>
-          <span class="work-arrow" aria-hidden="true">↗</span>
-        </a>
-        <p class="project-summary">A full-stack catalog application exploring API-driven product data and inventory updates.</p>
-      </li>
-    </ul>
+  <section class="projects-catalog" aria-labelledby="case-studies-title">
+    <div class="projects-catalog-heading">
+      <h2 id="case-studies-title">Case studies</h2>
+      <span>EXPLORE THE WORK <span aria-hidden="true">↘</span></span>
+    </div>
+    <ol class="project-cards">
+      {projects.map((project, index) => (
+        <li>
+          <a class="project-card" href={project.href}>
+            <span class="project-card-number">{String(index + 1).padStart(2, '0')}</span>
+            <div class="project-card-body">
+              <div class="project-card-heading">
+                <h3>{project.title}</h3>
+                <span class="project-card-arrow" aria-hidden="true">↗</span>
+              </div>
+              <p class="project-card-description">{project.description}</p>
+              <div class="project-card-tags" aria-label="Technologies">
+                <span class="project-card-category">{project.label}</span>
+                {project.technologies.map((technology) => <span>{technology}</span>)}
+              </div>
+            </div>
+          </a>
+        </li>
+      ))}
+    </ol>
   </section>
 
-  <section class="content-section">
-    <div class="section-heading"><h2>have a good problem?</h2></div>
-    <p class="section-copy">I enjoy untangling messy workflows and turning them into useful systems. <a class="subtle-link" href="mailto:cainmacias69@gmail.com">Let’s talk ↗</a></p>
+  <section class="closing-panel projects-contact">
+    <div>
+      <p class="eyebrow">LET'S CONNECT</p>
+      <h2>Have a good problem?</h2>
+      <p>I enjoy untangling messy workflows and turning them into useful systems.</p>
+    </div>
+    <a class="primary-link" href="mailto:cainmacias69@gmail.com">Say hello <span aria-hidden="true">↗</span></a>
   </section>
 
   <footer class="site-footer">
     <span>© 2026 Cain Macias</span>
     <span>made with curiosity in Texas</span>
+    <div><a href="https://github.com/BrownYumYum" target="_blank" rel="noreferrer">GitHub ↗</a><a href="mailto:cainmacias69@gmail.com">Email ↗</a></div>
   </footer>
 </Layout>
