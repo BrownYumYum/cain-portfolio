@@ -1,8 +1,9 @@
 ---
-layout: ../../layouts/Layout.astro
+layout: ../../layouts/ProjectLayout.astro
+title: "Python Automation & Reconciliation"
+description: "An enterprise data workflow for vendor pricing, product catalog reconciliation, and automated reporting."
+category: "Automation & data"
 ---
-
-[← Back to Systems](/projects)
 
 # Enterprise Data Engine: AutoQuotes, Epicor & HubSpot Synchronization
 
