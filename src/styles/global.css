@@ -78,3 +78,13 @@ article td { color: var(--muted); font-family: 'DM Mono', ui-monospace, monospac
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
+
+.project-list li { padding: 2px 0 14px; }
+.project-list a { padding-bottom: 8px; }
+.project-summary { max-width: 570px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.project-list .work-name { font-size: 13px; }
+.project-list .work-meta { font-size: 10px; }
+@media (max-width: 560px) {
+  .project-list a { padding-bottom: 5px; }
+  .project-summary { padding-right: 20px; }
+}
