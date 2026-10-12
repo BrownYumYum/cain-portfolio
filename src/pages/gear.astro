@@ -18,20 +18,32 @@ import Layout from '../layouts/Layout.astro';
   </nav>
 
   <header class="mb-12">
-    <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">Setup & Gear</h1>
-    <p class="text-zinc-400">The hardware, mobile devices, and daily tools I use for software engineering and systems development.</p>
+    <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">Setup & Workstation</h1>
+    <p class="text-zinc-400">The hardware, peripherals, and daily tools I use for software engineering and local AI workflows.</p>
   </header>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
     <!-- Desktop Rig -->
     <div class="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl">
       <div class="aspect-video bg-zinc-950 rounded-xl mb-4 overflow-hidden border border-zinc-800">
-        <img src="/images/gear/desktop.jpg" alt="Custom Desktop PC" class="w-full h-full object-cover" />
+        <img src="/images/gear/desktop.jpg" alt="Custom PC Build" class="w-full h-full object-cover" />
       </div>
       <h2 class="text-lg font-bold text-white mb-1">Custom Development Desktop</h2>
-      <p class="text-xs font-mono text-blue-400 mb-3">Primary Workstation & Local Build Rig</p>
+      <p class="text-xs font-mono text-blue-400 mb-3">Primary Build & Local AI Rig</p>
       <p class="text-sm text-zinc-400">
-        Powered by an AMD Ryzen 7 9700X paired with an NVIDIA GeForce RTX 5080 GPU, optimized for running local AI models, heavy compilation, and data pipelines.
+        AMD Ryzen 7 9700X paired with an NVIDIA GeForce RTX 5080 GPU, custom Lian Li RGB fan array, and AIO liquid cooling—built for heavy compilation and local model execution.
+      </p>
+    </div>
+
+    <!-- Desk & Display -->
+    <div class="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl">
+      <div class="aspect-video bg-zinc-950 rounded-xl mb-4 overflow-hidden border border-zinc-800">
+        <img src="/images/gear/setup.jpg" alt="Secretlab Workstation" class="w-full h-full object-cover" />
+      </div>
+      <h2 class="text-lg font-bold text-white mb-1">ASUS ROG Swift 32" 4K OLED & Secretlab Desk</h2>
+      <p class="text-xs font-mono text-blue-400 mb-3">31.5" 4K OLED 240Hz (PG32UCDM) + Secretlab MAGNUS Pro XL</p>
+      <p class="text-sm text-zinc-400">
+        Secretlab MAGNUS Pro XL sit-to-stand desk paired with a 31.5" 4K OLED 240Hz monitor, monitor lightbar, and ambient dual-zone lighting.
       </p>
     </div>
 
@@ -41,34 +53,45 @@ import Layout from '../layouts/Layout.astro';
         <img src="/images/gear/laptop.jpg" alt="ASUS ROG Zephyrus G14" class="w-full h-full object-cover" />
       </div>
       <h2 class="text-lg font-bold text-white mb-1">ASUS ROG Zephyrus G14</h2>
-      <p class="text-xs font-mono text-blue-400 mb-3">Mobile Engineering Laptop</p>
+      <p class="text-xs font-mono text-blue-400 mb-3">Mobile Workstation</p>
       <p class="text-sm text-zinc-400">
-        Equipped with an AMD Ryzen AI 9 HX 370 processor and NVIDIA GeForce RTX 5070 Ti for high-performance mobile development and remote systems management.
+        AMD Ryzen AI 9 HX 370 processor and NVIDIA GeForce RTX 5070 Ti in a compact chassis for engineering on the go.
       </p>
     </div>
 
     <!-- Handheld & XR -->
     <div class="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl">
       <div class="aspect-video bg-zinc-950 rounded-xl mb-4 overflow-hidden border border-zinc-800">
-        <img src="/images/gear/xr.jpg" alt="VITURE Glasses & ROG Ally" class="w-full h-full object-cover" />
+        <img src="/images/gear/xr.jpg" alt="VITURE XR & ROG Ally" class="w-full h-full object-cover" />
       </div>
       <h2 class="text-lg font-bold text-white mb-1">VITURE XR Glasses & ROG Ally</h2>
-      <p class="text-xs font-mono text-blue-400 mb-3">Extended Reality & Mobile Compute</p>
+      <p class="text-xs font-mono text-blue-400 mb-3">Wearable Display & Mobile Compute</p>
       <p class="text-sm text-zinc-400">
-        VITURE Luma Pro / Beast XR wearable display glasses paired with an AMD Ryzen Z1 Extreme ROG Ally handheld console for mobile workspace expansion.
-      </p>
-    </div>
-
-    <!-- Tablet / Peripherals -->
-    <div class="bg-zinc-900/60 border border-zinc-800 p-6 rounded-2xl">
-      <div class="aspect-video bg-zinc-950 rounded-xl mb-4 overflow-hidden border border-zinc-800">
-        <img src="/images/gear/tablet.jpg" alt="iPad Air" class="w-full h-full object-cover" />
-      </div>
-      <h2 class="text-lg font-bold text-white mb-1">Apple iPad Air (5th Gen)</h2>
-      <p class="text-xs font-mono text-blue-400 mb-3">Diagramming & Notes</p>
-      <p class="text-sm text-zinc-400">
-        Paired with Apple Pencil (2nd Gen) for architecture sketching, workflow diagrams, and technical planning sessions.
+        VITURE Luma Pro / Beast XR display glasses paired with an AMD Ryzen Z1 Extreme ROG Ally handheld for wearable workspace expansion.
       </p>
     </div>
   </div>
+
+  <!-- Peripherals & Audio Grid -->
+  <section class="border-t border-zinc-800 pt-8">
+    <h3 class="text-xs font-mono font-bold text-zinc-500 uppercase tracking-widest mb-6">Peripherals & Audio</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-mono">
+      <div class="bg-zinc-900/40 border border-zinc-800 p-4 rounded-xl">
+        <span class="block text-blue-400 mb-1 font-semibold">Custom Mechanical Keyboard</span>
+        <span class="text-zinc-300">Glorious GMMK 3 75% Wireless (Brass Plate, Sage Green & Metal Top Case, Fox Heavy Switches)</span>
+      </div>
+      <div class="bg-zinc-900/40 border border-zinc-800 p-4 rounded-xl">
+        <span class="block text-blue-400 mb-1 font-semibold">Audio & Microphones</span>
+        <span class="text-zinc-300">Razer Kraken V4 Pro Headset & SteelSeries Alias Studio Mic</span>
+      </div>
+      <div class="bg-zinc-900/40 border border-zinc-800 p-4 rounded-xl">
+        <span class="block text-blue-400 mb-1 font-semibold">Desk & Cable Management</span>
+        <span class="text-zinc-300">Secretlab MAGNUS Pro XL Sit-to-Stand Metal Desk</span>
+      </div>
+      <div class="bg-zinc-900/40 border border-zinc-800 p-4 rounded-xl">
+        <span class="block text-blue-400 mb-1 font-semibold">Tablets & Input</span>
+        <span class="text-zinc-300">Apple iPad Air (5th Gen) + Apple Pencil (2nd Gen)</span>
+      </div>
+    </div>
+  </section>
 </Layout>
