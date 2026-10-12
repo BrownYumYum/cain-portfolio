@@ -38,16 +38,49 @@ import Layout from '../layouts/Layout.astro';
     </aside>
   </section>
 
-  <section class="featured-panel" aria-labelledby="featured-title">
-    <div class="featured-topline"><span class="eyebrow">CURRENTLY BUILDING</span><span class="status-pill"><span class="status-dot"></span> Systems in motion</span></div>
-    <div class="featured-content">
-      <div>
-        <h2 id="featured-title">Connecting the tools behind the work.</h2>
-        <p>From ERP and CRM data to vendor pricing and customer ordering, I focus on making disconnected systems more useful together — with automation that saves time and makes information easier to trust.</p>
-      </div>
-      <div class="featured-stamp"><span>SYS</span><span>001</span><span class="stamp-line"></span><span>OPS / DATA</span></div>
+  <section class="featured-panel feature-spotlight" aria-labelledby="featured-title">
+    <div class="feature-spotlight-top">
+      <span class="eyebrow">FEATURED BUILD / 2026</span>
+      <span class="status-pill"><span class="status-dot"></span> Current project</span>
     </div>
-    <div class="tech-tags"><span>Epicor Eclipse</span><span>HubSpot</span><span>ProKeep</span><span>Python</span><span>Django</span><span>AWS</span></div>
+    <div class="feature-spotlight-layout">
+      <div class="feature-spotlight-copy">
+        <p class="feature-overline">ENGINEERING THE BACK OFFICE</p>
+        <h2 id="featured-title">JEANSRS<span>.OPS</span></h2>
+        <p class="feature-lead">A connected operations platform for the messy space between ERP data, catalog pricing, customer workflows, and human-approved AI.</p>
+        <ul class="feature-highlights">
+          <li><span aria-hidden="true">↗</span> ERP + vendor catalog reconciliation</li>
+          <li><span aria-hidden="true">↗</span> Reviewable pricing and compliance workflows</li>
+          <li><span aria-hidden="true">↗</span> AI agent tools with human decision gates</li>
+        </ul>
+        <a class="feature-explore" href="/projects/jeansrs-ops">Explore the architecture <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="feature-system" aria-label="Simplified JEANSRS.OPS architecture">
+        <div class="feature-system-head">
+          <span>OPERATIONS / SYSTEM MAP</span>
+          <span class="feature-system-indicator" aria-hidden="true">● ● ●</span>
+        </div>
+        <div class="feature-system-inputs">
+          <span>EPICOR</span><span>AUTOQUOTES</span><span>SERVICE APIS</span>
+        </div>
+        <div class="feature-system-connector" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="feature-system-core">
+          <span class="feature-system-core-caption">CONTROL LAYER</span>
+          <strong>JEANSRS.OPS</strong>
+          <small>integrate · validate · orchestrate</small>
+        </div>
+        <div class="feature-system-connector feature-system-connector-down" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="feature-system-outputs">
+          <span>PRICING</span><span>CRM</span><span>AI TOOLS</span>
+        </div>
+        <div class="feature-system-guard"><span class="feature-system-guard-dot"></span> HUMAN APPROVAL + RUN HISTORY</div>
+      </div>
+    </div>
+    <div class="feature-spotlight-bottom">
+      <div class="feature-stat"><strong>18</strong><span>AUTOMATION HOOK ROUTES</span></div>
+      <div class="feature-stat"><strong>200</strong><span>RECORD IMPORT CHUNKS</span></div>
+      <div class="feature-stat"><strong>APPROVALS</strong><span>BEFORE HIGH-IMPACT AI ACTIONS</span></div>
+    </div>
   </section>
 
   <section class="content-section" aria-labelledby="now-title">
@@ -62,6 +95,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="content-section work-section" aria-labelledby="work-title">
     <div class="section-heading"><div><p class="eyebrow">SELECTED PROJECTS</p><h2 id="work-title">A few things I’ve worked on</h2></div><a class="subtle-link" href="/projects">All projects <span aria-hidden="true">↗</span></a></div>
     <ul class="work-list">
+      <li><a href="/projects/jeansrs-ops"><span class="work-number">01</span><span class="work-main"><span class="work-name">JEANSRS.OPS — enterprise operations platform</span><span class="work-description">Integration architecture, catalog pipelines, and human-supervised AI.</span></span><span class="work-meta">CURRENT BUILD</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
       <li><a href="/projects/python-automation-engine"><span class="work-number">01</span><span class="work-main"><span class="work-name">Python automation & reconciliation</span><span class="work-description">Vendor pricing checks, catalog matching, and automated reporting.</span></span><span class="work-meta">AUTOMATION</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
       <li><a href="/projects/enterprise-migration"><span class="work-number">02</span><span class="work-main"><span class="work-name">Enterprise system migration</span><span class="work-description">Moving operational records between business platforms with audit checks.</span></span><span class="work-meta">INTEGRATION</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
       <li><a href="/projects/b2b-ordering-platform"><span class="work-number">03</span><span class="work-main"><span class="work-name">B2B ordering platform</span><span class="work-description">Account-based ordering, tiered pricing, and web application infrastructure.</span></span><span class="work-meta">WEB APP</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
