@@ -2,10 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 
 const projects = [
-  { number: '01', name: 'JEANSRS.OPS', subtitle: 'ERP-connected operations platform with AI-assisted workflows', type: 'Enterprise systems', href: '/projects/jeansrs-ops', stack: 'React · TypeScript · Integrations' },
-  { number: '02', name: 'Python automation & reconciliation', subtitle: 'Catalog matching, vendor pricing changes, and reporting', type: 'Automation', href: '/projects/python-automation-engine', stack: 'Python · ETL · APIs' },
-  { number: '03', name: 'Enterprise system migration', subtitle: 'Data transformation, quality checks, and system parity', type: 'Data engineering', href: '/projects/enterprise-migration', stack: 'ERP · Python · Validation' },
-  { number: '04', name: 'B2B ordering & fulfillment', subtitle: 'An account-based ordering application for institutions', type: 'Web applications', href: '/projects/b2b-ordering-platform', stack: 'Django · PostgreSQL · AWS' },
+  { number: '01', name: 'JEANSRS.OPS', subtitle: 'ERP-connected operations platform with AI-assisted workflows', type: 'Enterprise systems', href: '/projects/jeansrs-ops', tools: [{ name: 'React', tone: 'blue' }, { name: 'TypeScript', tone: 'blue' }, { name: 'AI workflows', tone: 'mint' }] },
+  { number: '02', name: 'Python automation & reconciliation', subtitle: 'Catalog matching, vendor pricing changes, and reporting', type: 'Automation', href: '/projects/python-automation-engine', tools: [{ name: 'Python', tone: 'blue' }, { name: 'ETL', tone: 'amber' }, { name: 'APIs', tone: 'blue' }] },
+  { number: '03', name: 'Enterprise system migration', subtitle: 'Data transformation, quality checks, and system parity', type: 'Data engineering', href: '/projects/enterprise-migration', tools: [{ name: 'ERP', tone: 'amber' }, { name: 'Python', tone: 'blue' }, { name: 'Validation', tone: 'mint' }] },
+  { number: '04', name: 'B2B ordering & fulfillment', subtitle: 'An account-based ordering application for institutions', type: 'Web applications', href: '/projects/b2b-ordering-platform', tools: [{ name: 'Django', tone: 'mint' }, { name: 'PostgreSQL', tone: 'violet' }, { name: 'AWS', tone: 'amber' }] },
 ];
 
 const education = [
@@ -42,7 +42,7 @@ const education = [
         <span class="ref-featured-pill"><span class="ref-online-dot"></span> In development</span>
         <h2 id="featured-heading">JEANSRS.OPS <span aria-hidden="true">↗</span></h2>
         <p>A connected operations platform bringing together ERP data, manufacturer catalogs, customer workflows, and human-reviewed AI actions.</p>
-        <div class="ref-tags"><span>Epicor Eclipse</span><span>React + TypeScript</span><span>API integrations</span><span>AI workflows</span></div>
+        <div class="ref-tags" aria-label="Featured project technologies"><span class="tech-pill tech-pill--amber">Epicor Eclipse</span><span class="tech-pill tech-pill--blue">React + TypeScript</span><span class="tech-pill tech-pill--violet">API integrations</span><span class="tech-pill tech-pill--mint">AI workflows</span></div>
         <span class="ref-read-more">Read the technical case study <span aria-hidden="true">→</span></span>
       </div>
       <div class="ref-system-art" aria-hidden="true">
@@ -70,6 +70,7 @@ const education = [
           <span class="ref-work-content">
             <span class="ref-work-name">{project.name}</span>
             <span class="ref-work-desc">{project.subtitle}</span>
+            <span class="ref-work-technologies" aria-label="Technologies">{project.tools.map((tool) => <span class={`tech-pill tech-pill--${tool.tone}`}>{tool.name}</span>)}</span>
           </span>
           <span class="ref-work-type">{project.type}</span>
           <span class="ref-work-arrow" aria-hidden="true">↗</span>
