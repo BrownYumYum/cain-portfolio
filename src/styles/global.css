@@ -670,3 +670,126 @@ html[data-theme="light"] .case-architecture-heading, html[data-theme="light"] .c
   html.has-js .ref-reveal, html.has-js .ref-reveal.is-visible { opacity: 1; transform: none; transition: none; }
   .ref-photo-surround, .ref-work-row, .ref-featured-link { transition: none; }
 }
+
+
+/* COLOR-CODED PROJECT TECHNOLOGIES — readable in both themes */
+.project-card-tags .tech-pill,
+.ref-tags .tech-pill,
+.ref-work-technologies .tech-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 23px;
+  padding: 4px 10px;
+  border: 1px solid var(--tech-pill-border);
+  border-radius: 999px;
+  background: var(--tech-pill-bg);
+  color: var(--tech-pill-text);
+  font-family: 'DM Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: .005em;
+  white-space: nowrap;
+  transition: transform .18s ease, background-color .18s ease, border-color .18s ease;
+}
+
+/* Blue: languages and integrations */
+.tech-pill--blue {
+  --tech-pill-text: #9cceff;
+  --tech-pill-bg: rgba(72, 148, 227, .15);
+  --tech-pill-border: rgba(95, 168, 244, .34);
+}
+/* Mint: automation, validation, AI */
+.tech-pill--mint {
+  --tech-pill-text: #9eebce;
+  --tech-pill-bg: rgba(53, 181, 138, .14);
+  --tech-pill-border: rgba(86, 211, 165, .33);
+}
+/* Violet: databases and data platforms */
+.tech-pill--violet {
+  --tech-pill-text: #d0b9ff;
+  --tech-pill-bg: rgba(141, 112, 219, .16);
+  --tech-pill-border: rgba(176, 148, 243, .33);
+}
+/* Amber: cloud, ERP, infrastructure */
+.tech-pill--amber {
+  --tech-pill-text: #ffd599;
+  --tech-pill-bg: rgba(217, 156, 57, .14);
+  --tech-pill-border: rgba(232, 173, 76, .32);
+}
+
+html[data-theme="light"] .tech-pill--blue {
+  --tech-pill-text: #1b5a9c;
+  --tech-pill-bg: rgba(64, 135, 213, .12);
+  --tech-pill-border: rgba(40, 109, 186, .29);
+}
+html[data-theme="light"] .tech-pill--mint {
+  --tech-pill-text: #08674e;
+  --tech-pill-bg: rgba(34, 166, 117, .12);
+  --tech-pill-border: rgba(21, 136, 96, .27);
+}
+html[data-theme="light"] .tech-pill--violet {
+  --tech-pill-text: #6841a0;
+  --tech-pill-bg: rgba(143, 100, 214, .12);
+  --tech-pill-border: rgba(116, 74, 182, .27);
+}
+html[data-theme="light"] .tech-pill--amber {
+  --tech-pill-text: #885508;
+  --tech-pill-bg: rgba(225, 161, 49, .15);
+  --tech-pill-border: rgba(174, 111, 15, .28);
+}
+/* The previous general light-mode span selector must not mute our accent colors. */
+html[data-theme="light"] .project-card-tags .tech-pill,
+html[data-theme="light"] .ref-tags .tech-pill,
+html[data-theme="light"] .ref-work-technologies .tech-pill {
+  color: var(--tech-pill-text);
+  background: var(--tech-pill-bg);
+  border-color: var(--tech-pill-border);
+}
+
+.ref-work-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+.ref-work-technologies .tech-pill {
+  min-height: 20px;
+  padding: 3px 8px;
+  font-size: 9px;
+}
+
+.project-card:hover .tech-pill,
+.ref-featured-link:hover .tech-pill,
+.ref-work-row:hover .tech-pill {
+  transform: translateY(-1px);
+  border-color: currentColor;
+}
+.project-card-tags .project-card-category {
+  border-radius: 999px;
+  font-weight: 500;
+}
+.ref-work-type { color: var(--blue); }
+
+@media (max-width: 560px) {
+  .project-card-tags .tech-pill,
+  .ref-tags .tech-pill {
+    padding: 4px 8px;
+    font-size: 9px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-card-tags .tech-pill,
+  .ref-tags .tech-pill,
+  .ref-work-technologies .tech-pill {
+    transition: none;
+  }
+  .project-card:hover .tech-pill,
+  .ref-featured-link:hover .tech-pill,
+  .ref-work-row:hover .tech-pill {
+    transform: none;
+  }
+}
