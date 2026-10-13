@@ -8,35 +8,35 @@ const projects = [
     description: 'A React and TypeScript operations platform connecting ERP data, manufacturer catalogs, business workflows, and human-supervised AI tools.',
     href: '/projects/jeansrs-ops',
     label: 'Current build',
-    technologies: ['React + TypeScript', 'Supabase', 'ERP + AI'],
+    technologies: [{ name: 'React + TypeScript', tone: 'blue' }, { name: 'Supabase', tone: 'violet' }, { name: 'ERP + AI', tone: 'mint' }],
   },
   {
     title: 'Python Automation & Reconciliation',
     description: 'Vendor catalog processing, change detection, and repeatable output generation designed to reduce manual reconciliation.',
     href: '/projects/python-automation-engine',
     label: 'Automation & data',
-    technologies: ['Python', 'Data quality', 'ETL'],
+    technologies: [{ name: 'Python', tone: 'blue' }, { name: 'Data quality', tone: 'violet' }, { name: 'ETL', tone: 'amber' }],
   },
   {
     title: 'Enterprise System Migration',
     description: 'Data transformation and parity checks for moving business records between legacy and modern systems.',
     href: '/projects/enterprise-migration',
     label: 'ERP & data migration',
-    technologies: ['Epicor', 'Python', 'Validation'],
+    technologies: [{ name: 'Epicor', tone: 'amber' }, { name: 'Python', tone: 'blue' }, { name: 'Validation', tone: 'mint' }],
   },
   {
     title: 'B2B Ordering & Fulfillment Platform',
     description: 'An account-based ordering experience with tiered pricing and backend workflows for institutional customers.',
     href: '/projects/b2b-ordering-platform',
     label: 'Web applications',
-    technologies: ['Django', 'PostgreSQL', 'AWS'],
+    technologies: [{ name: 'Django', tone: 'mint' }, { name: 'PostgreSQL', tone: 'violet' }, { name: 'AWS', tone: 'amber' }],
   },
   {
     title: 'Django & MongoDB Data Platform',
     description: 'A catalog application exploring API-driven product data, inventory updates, and pricing analysis.',
     href: '/projects/django-mongodb-infrastructure',
     label: 'Data infrastructure',
-    technologies: ['Django', 'MongoDB', 'APIs'],
+    technologies: [{ name: 'Django', tone: 'mint' }, { name: 'MongoDB', tone: 'mint' }, { name: 'APIs', tone: 'blue' }],
   }
 ];
 ---
@@ -72,7 +72,7 @@ const projects = [
               <p class="project-card-description">{project.description}</p>
               <div class="project-card-tags" aria-label="Technologies">
                 <span class="project-card-category">{project.label}</span>
-                {project.technologies.map((technology) => <span>{technology}</span>)}
+                {project.technologies.map((technology) => <span class={`tech-pill tech-pill--${technology.tone}`}>{technology.name}</span>)}
               </div>
             </div>
           </a>
