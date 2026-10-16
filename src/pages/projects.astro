@@ -3,6 +3,14 @@ import Layout from '../layouts/Layout.astro';
 
 const projects = [
   {
+    title: 'ORION Desktop — Local-First AI Assistant',
+    featured: true,
+    description: 'A native Windows AI assistant with local model inference, streaming chat, model discovery, and a security-first foundation for permission-controlled automation.',
+    href: '/projects/orion-desktop',
+    label: 'In development · Desktop AI',
+    technologies: [{ name: 'Rust + Tauri', tone: 'amber' }, { name: 'React + TypeScript', tone: 'blue' }, { name: 'Ollama', tone: 'mint' }],
+  },
+  {
     title: 'JEANSRS.OPS — Connected Operations Platform',
     featured: true,
     description: 'A React and TypeScript operations platform connecting ERP data, manufacturer catalogs, business workflows, and human-supervised AI tools.',
@@ -48,7 +56,7 @@ const projects = [
     <h1 id="projects-title">Things I’ve <span>built & improved.</span></h1>
     <p>Enterprise integrations, useful software, and data workflows. Each case study explores a problem, the approach I took, and the technology behind the work.</p>
     <div class="projects-hero-meta">
-      <span>05 CASE STUDIES</span>
+      <span>06 CASE STUDIES</span>
       <span>ENGINEERING · OPERATIONS · DATA</span>
     </div>
   </section>
