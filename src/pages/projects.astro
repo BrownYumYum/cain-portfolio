@@ -16,6 +16,7 @@ const projects = [
     description: 'A React and TypeScript operations platform connecting ERP data, manufacturer catalogs, business workflows, and human-supervised AI tools.',
     href: '/projects/jeansrs-ops',
     label: 'Current build',
+    publicDemo: true,
     technologies: [{ name: 'React + TypeScript', tone: 'blue' }, { name: 'Supabase', tone: 'violet' }, { name: 'ERP + AI', tone: 'mint' }],
   },
   {
@@ -84,6 +85,12 @@ const projects = [
               </div>
             </div>
           </a>
+          {project.publicDemo && (
+            <div style="display:flex;flex-wrap:wrap;gap:0.85rem;margin:0.75rem 0 1.5rem 3.5rem;">
+              <a href="https://operations-platform-portfolio-demo.netlify.app/" target="_blank" rel="noopener noreferrer" class="ref-text-link" aria-label="Try the operations platform public demo">Try public demo ↗</a>
+              <a href="https://github.com/BrownYumYum/Operations-Platform-Portfolio-Demo" target="_blank" rel="noopener noreferrer" class="ref-text-link" aria-label="View operations platform demo source code">View demo source ↗</a>
+            </div>
+          )}
         </li>
       ))}
     </ol>
