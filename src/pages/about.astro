@@ -50,6 +50,20 @@ import Layout from '../layouts/Layout.astro';
       </p>
     </section>
 
+
+    <section class="journey-gallery ref-reveal" aria-labelledby="journey-gallery-title">
+      <div class="ref-section-label"><span class="ref-label-line"></span> PERSONAL JOURNEY <span class="ref-label-right">THEN & NOW</span></div>
+      <h2 id="journey-gallery-title">the moments behind the work</h2>
+      <p class="journey-gallery-intro">A few snapshots of where I started, the people who shaped me, and the milestones that brought me here.</p>
+      <div class="journey-photo-grid">
+        <figure class="journey-photo journey-photo--childhood"><img src="/journey/childhood-sesame.webp" loading="lazy" decoding="async" alt="Childhood studio portrait wearing a blue Sesame Street outfit" /><figcaption><strong>The early years</strong><span>Where it all began</span></figcaption></figure>
+        <figure class="journey-photo journey-photo--childhood"><img src="/journey/childhood-astros.webp" loading="lazy" decoding="async" alt="Childhood school portrait wearing an Astros jersey" /><figcaption><strong>Growing up</strong><span>A little piece of home</span></figcaption></figure>
+        <figure class="journey-photo"><img src="/journey/del-mar-laboratory-milestone.webp" loading="lazy" decoding="async" alt="Receiving recognition in a laboratory coat at Del Mar College" /><figcaption><strong>A milestone in healthcare</strong><span>Medical Laboratory Technology · 2024</span></figcaption></figure>
+        <figure class="journey-photo"><img src="/journey/graduation-family-tribute.webp" loading="lazy" decoding="async" alt="Wearing graduation regalia while honoring family at a graveside memorial" /><figcaption><strong>Carrying them with me</strong><span>Graduation, remembrance, and gratitude</span></figcaption></figure>
+        <figure class="journey-photo journey-photo--detail"><img src="/journey/medical-lab-pin.webp" loading="lazy" decoding="async" alt="Medical Laboratory Technician pin on a white laboratory coat" /><figcaption><strong>The details matter</strong><span>A reminder of where my career began</span></figcaption></figure>
+      </div>
+    </section>
+
     <section class="about-education" aria-labelledby="education-title">
       <div class="section-heading">
         <div>
@@ -114,3 +128,27 @@ import Layout from '../layouts/Layout.astro';
       </ul>
     </section>
   </div></Layout>
+
+
+<style>
+  .journey-gallery { margin: 42px 0 56px; }
+  .journey-gallery h2 { color: var(--text); font-size: clamp(23px, 3vw, 30px); font-weight: 650; letter-spacing: -.045em; margin: 17px 0 8px; }
+  .journey-gallery-intro { color: var(--muted); max-width: 640px; margin: 0 0 23px; }
+  .journey-photo-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+  .journey-photo { grid-column: span 2; margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
+  .journey-photo--childhood { grid-column: span 3; }
+  .journey-photo img { display: block; width: 100%; height: 220px; object-fit: cover; object-position: center 35%; }
+  .journey-photo--childhood img { height: 250px; }
+  .journey-photo--detail img { object-position: center 48%; }
+  .journey-photo figcaption { display: flex; flex-direction: column; gap: 2px; padding: 12px 14px 14px; }
+  .journey-photo figcaption strong { color: var(--text); font-size: 13px; font-weight: 650; }
+  .journey-photo figcaption span { color: var(--muted); font-size: 11px; }
+  @media(max-width: 640px) {
+    .journey-photo-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+    .journey-photo, .journey-photo--childhood { grid-column: span 1; }
+    .journey-photo img, .journey-photo--childhood img { height: 190px; }
+    .journey-photo:last-child { grid-column: span 2; }
+    .journey-photo:last-child img { height: 160px; }
+    .journey-photo figcaption { padding: 9px 10px 11px; }
+  }
+</style>
