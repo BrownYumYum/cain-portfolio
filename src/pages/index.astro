@@ -36,6 +36,15 @@ const education = [
     </figure>
   </section>
 
+  <section class="ref-simple-section ref-reveal" aria-labelledby="whats-new-heading">
+    <div class="ref-section-label"><span class="ref-label-line"></span> WHAT'S NEW <span class="ref-label-right">NOVEMBER 2026</span></div>
+    <div class="ref-section-heading"><h2 id="whats-new-heading">recent milestones</h2><a class="ref-text-link" href="/about#certifications-title">View credentials <span aria-hidden="true">↗</span></a></div>
+    <div class="news-grid">
+      <article class="news-card"><span class="news-kicker">GPU COMPUTING · 2026</span><h3>Exploring the AMD ROCm stack</h3><p>Completed five AMD Academy modules covering Instinct GPU architecture, HIP programming, PyTorch on ROCm, CUDA porting, and performance profiling.</p><div class="ref-tags"><span class="tech-pill tech-pill--amber">AMD ROCm</span><span class="tech-pill tech-pill--blue">HIP</span><span class="tech-pill tech-pill--mint">PyTorch</span></div></article>
+      <article class="news-card"><span class="news-kicker">ENGINEERING · IN PROGRESS</span><h3>Building safer AI workflows</h3><p>Continuing to develop JEANSRS.OPS with specialist agents, read-only investigations, audit evidence, and human approval controls for operational decisions.</p><a href="/projects/jeansrs-ops" class="ref-text-link">Explore the project <span aria-hidden="true">↗</span></a></article>
+    </div>
+  </section>
+
   <section class="ref-featured ref-reveal" aria-labelledby="featured-heading">
     <div class="ref-section-label"><span class="ref-label-line"></span> CURRENTLY BUILDING <span class="ref-label-right">FEATURED / 2026</span></div>
     <a href="/projects/jeansrs-ops" class="ref-featured-link">
@@ -101,3 +110,14 @@ const education = [
     <a href="mailto:cainmacias69@gmail.com">Let's talk systems <span aria-hidden="true">↗</span></a>
   </section>
 </Layout>
+
+<style>
+  .news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
+  .news-card{padding:25px;border:1px solid var(--line);border-radius:14px;background:var(--panel);display:flex;flex-direction:column;align-items:flex-start;gap:13px}
+  .news-kicker{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--muted)}
+  .news-card h3{font-size:clamp(19px,2.1vw,25px);font-weight:650;letter-spacing:-.03em;color:var(--text);margin:0}
+  .news-card p{color:var(--muted);line-height:1.65;margin:0}
+  .news-card .ref-tags{margin-top:auto}
+  .news-card .ref-text-link{margin-top:auto}
+  @media(max-width:700px){.news-grid{grid-template-columns:1fr}.news-card{padding:20px}}
+</style>
