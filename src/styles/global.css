@@ -806,3 +806,63 @@ html[data-theme="light"] .ref-work-technologies .tech-pill {
 .project-card-cta--secondary:hover{background:rgba(51,65,85,.95);border-color:#93c5fd;color:#fff}
 @media(max-width:560px){.project-card-actions{margin-left:0;gap:.6rem}.project-card-cta{font-size:.85rem;padding:.7rem 1rem}}
 @media(prefers-reduced-motion:reduce){.project-card-cta{transition:none}.project-card-cta:hover{transform:none}}
+
+
+/* FOREST / 8-BIT WOODLAND — design branch November 2026 */
+:root, html[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0b1b13;
+  --panel: #12271c;
+  --text: #f1f3df;
+  --muted: #bdcbb1;
+  --faint: #91ac91;
+  --line: rgba(164, 191, 133, .22);
+  --blue: #b5d486;
+  --mint: #b8e09a;
+}
+html[data-theme="light"] {
+  --page: #f3f4e6;
+  --panel: #fffdf3;
+  --text: #243b29;
+  --muted: #506552;
+  --faint: #607861;
+  --line: rgba(53, 86, 50, .22);
+  --blue: #3e6d36;
+  --mint: #34784e;
+}
+body { background: radial-gradient(ellipse at 80% 0,rgba(75,133,69,.22),transparent 43%),radial-gradient(ellipse at 8% 22%,rgba(59,93,53,.13),transparent 50%),var(--page); }
+html[data-theme="light"] body { background: radial-gradient(ellipse at 80% 0,rgba(126,167,100,.19),transparent 42%),var(--page); }
+body::before { background-image:linear-gradient(rgba(155,184,123,.065) 1px,transparent 1px),linear-gradient(90deg,rgba(155,184,123,.065) 1px,transparent 1px); }
+.ref-site-header { background:rgba(10,27,18,.93); }
+html[data-theme="light"] .ref-site-header { background:rgba(243,244,230,.94); }
+.ref-brand-mark { border-radius:3px;background:#1c422e;border:1px solid #678a55;color:#e6eac8;font-family:'DM Mono',monospace;box-shadow:3px 3px 0 rgba(87,129,67,.24); }
+html[data-theme="light"] .ref-brand-mark {background:#d9e9c9;color:#29492b;border-color:#78976b}
+.ref-hero { padding-bottom:33px; }
+.ref-hero h1 { font-weight:720;letter-spacing:-.06em; }
+.ref-hero-lead strong { color:var(--blue); }
+.ref-button { border-radius:4px;border-color:rgba(165,207,117,.52);background:linear-gradient(125deg,rgba(104,153,71,.26),rgba(50,91,46,.12));box-shadow:3px 3px 0 rgba(9,31,18,.38); }
+.ref-button:hover { background:rgba(115,170,77,.27); }
+.ref-photo-surround { border-radius:5px;border-color:rgba(162,196,119,.43);background:linear-gradient(135deg,rgba(110,155,81,.32),rgba(26,53,36,.55));box-shadow:5px 5px 0 rgba(16,51,27,.44); }
+.ref-photo-surround img { border-radius:2px; }
+.ref-online-dot { background:#bde09b;box-shadow:0 0 9px rgba(174,220,123,.45); }
+.ref-featured-link { border-radius:5px;border-color:rgba(143,183,112,.36);background:radial-gradient(circle at 88% 10%,rgba(83,137,71,.22),transparent 55%),rgba(19,46,30,.75); }
+.ref-featured-link:hover { border-color:#97c17a; }
+html[data-theme="light"] .ref-featured-link { background:#e6efda; }
+.news-card,.project-card,.ref-system-art { border-radius:5px; }
+.news-card { background:var(--panel); }
+.ref-work-row:hover { background:rgba(115,158,86,.1); }
+.ref-site-footer { border-top-color:var(--line); }
+.project-card-cta--primary { background:linear-gradient(135deg,#356b38,#719b47);box-shadow:0 8px 23px rgba(39,99,48,.27); }
+.project-card-cta--primary:hover { box-shadow:0 10px 27px rgba(47,112,54,.39); }
+.project-card-cta--secondary { background:rgba(26,64,38,.8);color:#e4eed8;border-color:rgba(145,190,115,.54); }
+.project-card-cta--secondary:hover { background:rgba(38,80,44,.95);border-color:#b1d38a; }
+.project-card-cta:focus-visible { outline-color:var(--blue); }
+.tech-pill--blue { --tech-pill-text:#c0e398;--tech-pill-bg:rgba(111,172,78,.15);--tech-pill-border:rgba(153,199,117,.35); }
+.tech-pill--mint { --tech-pill-text:#a9dfb4;--tech-pill-bg:rgba(59,151,111,.15);--tech-pill-border:rgba(108,201,143,.37); }
+.tech-pill--violet { --tech-pill-text:#d9c4a1;--tech-pill-bg:rgba(158,125,76,.15);--tech-pill-border:rgba(206,163,94,.36); }
+.tech-pill--amber { --tech-pill-text:#f1d38b;--tech-pill-bg:rgba(187,140,46,.15);--tech-pill-border:rgba(210,177,90,.36); }
+html[data-theme="light"] .tech-pill--blue { --tech-pill-text:#376e2d;--tech-pill-bg:rgba(93,151,60,.14);--tech-pill-border:rgba(70,126,48,.35); }
+html[data-theme="light"] .tech-pill--mint { --tech-pill-text:#1e7051;--tech-pill-bg:rgba(58,150,101,.12);--tech-pill-border:rgba(49,127,91,.33); }
+html[data-theme="light"] .tech-pill--violet { --tech-pill-text:#7c5625;--tech-pill-bg:rgba(162,125,58,.13);--tech-pill-border:rgba(139,99,50,.3); }
+html[data-theme="light"] .tech-pill--amber { --tech-pill-text:#80570c;--tech-pill-bg:rgba(194,144,49,.14);--tech-pill-border:rgba(157,111,26,.3); }
+@media(prefers-reduced-motion:reduce){.ref-button,.ref-photo-surround,.news-card{transition:none}}
