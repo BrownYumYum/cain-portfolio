@@ -1,21 +1,28 @@
 ---
 const pathname = Astro.url.pathname;
 const links = [
-  { href: '/', label: 'home', active: pathname === '/' },
-  { href: '/projects', label: 'work', active: pathname.startsWith('/projects') },
-  { href: '/about', label: 'about', active: pathname.startsWith('/about') },
-  { href: '/gear', label: 'gear', active: pathname.startsWith('/gear') },
+  { href: '/', label: 'home', hint: 'trailhead', number: '01', active: pathname === '/' },
+  { href: '/projects', label: 'work', hint: 'the builds', number: '02', active: pathname.startsWith('/projects') },
+  { href: '/about', label: 'about', hint: 'my story', number: '03', active: pathname.startsWith('/about') },
+  { href: '/gear', label: 'gear', hint: 'workbench', number: '04', active: pathname.startsWith('/gear') },
 ];
 ---
 <header class="ref-site-header">
   <nav class="ref-nav" aria-label="Main navigation">
     <a href="/" class="ref-brand" aria-label="Cain Macias — home">
       <span class="ref-brand-mark" aria-hidden="true">cm<span>.</span></span>
-      <span class="ref-brand-name">Cain Macias</span>
+      <span class="ref-brand-lockup">
+        <span class="ref-brand-name">Cain Macias</span>
+        <span class="ref-brand-caption">engineering / field notes</span>
+      </span>
     </a>
     <div class="ref-nav-links">
       {links.map(link => (
-        <a href={link.href} class:list={['ref-nav-link', { 'is-active': link.active }]} aria-current={link.active ? 'page' : undefined}>{link.label}</a>
+        <a href={link.href} class:list={['ref-nav-link', { 'is-active': link.active }]} aria-current={link.active ? 'page' : undefined}>
+          <span class="trail-marker" aria-hidden="true"></span>
+          <span class="trail-label"><span class="trail-index">{link.number}</span>{link.label}</span>
+          <span class="trail-hint">{link.hint}</span>
+        </a>
       ))}
     </div>
     <div class="ref-nav-actions">
