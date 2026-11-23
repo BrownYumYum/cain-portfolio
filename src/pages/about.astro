@@ -115,17 +115,48 @@ import Layout from '../layouts/Layout.astro';
       </ol>
     </section>
 
-    <section class="about-certifications" aria-labelledby="certifications-title">
+    <section class="about-certifications ref-reveal" aria-labelledby="certifications-title">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">PROFESSIONAL LEARNING</p>
-          <h2 id="certifications-title">Certifications</h2>
+          <p class="eyebrow">VERIFIED LEARNING &amp; PROFESSIONAL DEVELOPMENT</p>
+          <h2 id="certifications-title">Credentials &amp; certifications</h2>
         </div>
       </div>
+      <p class="credentials-intro">Hands-on AI engineering credentials alongside professional certificates in business analysis and project management.</p>
       <ul class="certification-list">
-        <li><span class="certification-icon" aria-hidden="true">↗</span><div><strong>AMD ROCm Certified Associate</strong><span>AMD Academy · Credential earned after five courses and certification exam covering GPU architecture, ROCm, HIP, and performance optimization</span></div><span class="certification-date">2026</span></li>
-        <li><span class="certification-icon" aria-hidden="true">↗</span><div><strong>IBM Business Analyst Professional Certificate</strong><span>IBM</span></div><span class="certification-date">2025</span></li>
-        <li><span class="certification-icon" aria-hidden="true">↗</span><div><strong>Google Project Management Certificate</strong><span>Google</span></div><span class="certification-date">2025</span></li>
+        <li class="certification-featured">
+          <span class="certification-icon" aria-hidden="true">M</span>
+          <div>
+            <strong>Microsoft Applied Skills: Integrate model context protocol tools with agents in Microsoft Foundry</strong>
+            <span>Microsoft · Earned November 20, 2026 · Applied Skills credential demonstrating model deployment, agent configuration, MCP tool integration, and usage monitoring.</span>
+            <a class="credential-details-link" href="https://learn.microsoft.com/en-us/credentials/applied-skills/integrate-model-context-protocol-tools-with-agents-in-microsoft-foundry/" target="_blank" rel="noopener noreferrer">About this Microsoft credential ↗</a>
+          </div>
+          <span class="certification-date">NOV 2026</span>
+        </li>
+        <li class="certification-featured">
+          <span class="certification-icon" aria-hidden="true">AMD</span>
+          <div>
+            <strong>AMD ROCm Certified Associate</strong>
+            <span>AMD · 2026 · Earned after training and assessment in GPU architecture, ROCm, HIP, AI frameworks, and performance optimization.</span>
+          </div>
+          <span class="certification-date">2026</span>
+        </li>
+        <li>
+          <span class="certification-icon" aria-hidden="true">IBM</span>
+          <div>
+            <strong>IBM Business Analyst Professional Certificate</strong>
+            <span>IBM · Professional certificate in business analysis</span>
+          </div>
+          <span class="certification-date">2025</span>
+        </li>
+        <li>
+          <span class="certification-icon" aria-hidden="true">G</span>
+          <div>
+            <strong>Google Project Management Certificate</strong>
+            <span>Google · Professional certificate in project management</span>
+          </div>
+          <span class="certification-date">2025</span>
+        </li>
       </ul>
     </section>
   </div></Layout>
@@ -151,5 +182,18 @@ import Layout from '../layouts/Layout.astro';
     .journey-photo:last-child { grid-column: span 2; }
     .journey-photo:last-child img { height: 160px; }
     .journey-photo figcaption { padding: 9px 10px 11px; }
+  }
+
+  .credentials-intro{margin:0 0 18px;max-width:760px;color:var(--muted);font-size:13px;line-height:1.75}
+  .about-certifications .certification-list li{align-items:flex-start;padding:18px 12px;gap:14px}
+  .about-certifications .certification-list li.certification-featured{background:linear-gradient(100deg,rgba(77,121,61,.12),transparent 80%);border-color:var(--line)}
+  .about-certifications .certification-icon{flex:0 0 38px;width:38px;height:38px;border-radius:4px;font-family:'DM Mono',monospace;font-size:10px;font-weight:700;color:var(--blue);border-color:var(--line)}
+  .about-certifications .certification-list strong{color:var(--text);font-size:14px;font-weight:650}
+  .about-certifications .certification-date{flex:0 0 auto;white-space:nowrap;font-size:10px;padding-top:4px}
+  .about-certifications .credential-details-link{display:inline-flex;align-self:flex-start;margin-top:6px;color:var(--blue);font-size:11px;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+  .about-certifications .credential-details-link:hover{color:var(--text)}
+  @media(max-width:560px){
+    .about-certifications .certification-list li{display:grid;grid-template-columns:38px minmax(0,1fr);gap:6px 13px;padding:17px 8px}
+    .about-certifications .certification-date{grid-column:2;padding-top:0;font-size:9px}
   }
 </style>
