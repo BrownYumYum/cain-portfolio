@@ -106,12 +106,12 @@
 </section>
 
 <style>
-  .pixel-forest{position:relative;overflow:hidden;margin:-8px 0 64px;border:1px solid rgba(155,190,116,.34);border-radius:5px;background:#193b2b;box-shadow:0 16px 56px rgba(0,0,0,.18)}
+  .pixel-forest{position:relative;overflow:hidden;margin:0 0 32px;border:1px solid rgba(155,190,116,.34);border-radius:5px;background:#193b2b;box-shadow:0 16px 56px rgba(0,0,0,.18)}
   .pixel-forest::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 4px rgba(8,27,15,.13)}
   .pixel-forest-header{position:absolute;z-index:1;top:13px;left:18px;right:18px;display:flex;align-items:center;gap:8px;color:#e1eac2;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.015em;text-shadow:0 1px 2px #143121}
   .pixel-forest-header-end{margin-left:auto;color:#c0d3b0;opacity:.85;font-size:9px}
   .pixel-forest-spark{height:6px;width:6px;flex:none;background:#d3c583;box-shadow:8px 0 0 #668e60}
-  .pixel-forest-art{display:block;width:100%;height:auto;max-height:235px;image-rendering:pixelated;image-rendering:crisp-edges}
+  .pixel-forest-art{display:block;width:100%;height:240px;image-rendering:pixelated;image-rendering:crisp-edges}
   .pixel-forest-footnote{position:absolute;left:18px;bottom:11px;color:#f2edcd;background:rgba(15,39,25,.63);padding:3px 7px;margin:0;font:10px 'DM Mono',monospace;letter-spacing:.02em}
   .pixel-deer-head{transform-box:fill-box;transform-origin:4px 14px;animation:pixel-graze 7.2s steps(4,end) infinite}
   .pixel-rabbit-nibble{animation:pixel-nibble 2.6s steps(2,end) infinite}
@@ -119,6 +119,6 @@
   @keyframes pixel-graze{0%,18%,85%,100%{transform:rotate(0deg) translateY(0)}35%,67%{transform:rotate(13deg) translateY(6px)}}
   @keyframes pixel-nibble{0%,55%,100%{transform:translateY(0)}30%,75%{transform:translateY(3px)}}
   @keyframes pixel-firefly{0%,100%{opacity:.25;transform:translateY(0)}50%{opacity:1;transform:translateY(-6px)}}
-  @media(max-width:650px){.pixel-forest{margin:2px 0 47px}.pixel-forest-art{height:185px;width:100%;object-fit:cover}.pixel-forest-header{top:10px;left:10px;font-size:9px}.pixel-forest-header-end{display:none}.pixel-forest-footnote{bottom:8px;left:9px;font-size:9px}}
+  @media(max-width:650px){.pixel-forest{margin:0 0 28px}.pixel-forest-art{height:185px;width:100%;object-fit:cover}.pixel-forest-header{top:10px;left:10px;font-size:9px}.pixel-forest-header-end{display:none}.pixel-forest-footnote{bottom:8px;left:9px;font-size:9px}}
   @media(prefers-reduced-motion:reduce){.pixel-deer-head,.pixel-rabbit-nibble,.pixel-fireflies{animation:none}}
 </style>
