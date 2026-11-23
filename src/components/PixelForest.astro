@@ -1,6 +1,55 @@
-<section class="pixel-forest" aria-label="Animated pixel-art forest">
-  <div class="pixel-forest-header" aria-hidden="true"><span class="pixel-forest-spark"></span> a little wilderness between the work <span class="pixel-forest-header-end">/ 8-BIT WOODLAND</span></div>
-  <svg class="pixel-forest-art" viewBox="0 0 840 210" preserveAspectRatio="xMidYMax slice" role="img" aria-label="A pixel-art forest with pine trees, a deer slowly grazing, and a nibbling rabbit">
+<!-- The shared woodland is decorative: it lives behind every route, not in a boxed homepage card. -->
+<div class="site-forest-world" aria-hidden="true">
+  <div class="site-forest-atmosphere"></div>
+  <svg class="site-forest-canopy" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="site-ambient-pine" viewBox="0 0 90 165">
+        <rect x="40" y="112" width="12" height="53" fill="#5d7748"/>
+        <rect x="40" y="10" width="12" height="15" fill="#547e59"/>
+        <rect x="32" y="25" width="28" height="15" fill="#476e50"/>
+        <rect x="25" y="40" width="42" height="17" fill="#476e50"/>
+        <rect x="17" y="57" width="58" height="18" fill="#3d6247"/>
+        <rect x="25" y="75" width="43" height="12" fill="#3d6247"/>
+        <rect x="9" y="87" width="74" height="18" fill="#32553e"/>
+        <rect x="2" y="105" width="88" height="18" fill="#32553e"/>
+        <rect x="20" y="115" width="58" height="10" fill="#244c37"/>
+        <rect x="25" y="44" width="8" height="8" fill="#70906a"/>
+        <rect x="16" y="91" width="14" height="9" fill="#52794d"/>
+      </symbol>
+      <symbol id="site-ambient-sapling" viewBox="0 0 60 125">
+        <rect x="26" y="75" width="9" height="50" fill="#59774e"/>
+        <rect x="22" y="8" width="18" height="17" fill="#406a4c"/>
+        <rect x="16" y="25" width="30" height="19" fill="#406a4c"/>
+        <rect x="8" y="44" width="46" height="21" fill="#31543d"/>
+        <rect x="1" y="65" width="59" height="21" fill="#31543d"/>
+      </symbol>
+    </defs>
+    <g opacity=".38">
+      <use href="#site-ambient-pine" x="-55" y="-75" width="200" height="390"/>
+      <use href="#site-ambient-sapling" x="120" y="-35" width="115" height="245"/>
+      <use href="#site-ambient-pine" x="1290" y="-62" width="206" height="390"/>
+      <use href="#site-ambient-sapling" x="1190" y="-25" width="112" height="242"/>
+    </g>
+    <g opacity=".25">
+      <use href="#site-ambient-pine" x="-85" y="280" width="185" height="363"/>
+      <use href="#site-ambient-sapling" x="93" y="360" width="125" height="245"/>
+      <use href="#site-ambient-pine" x="1320" y="300" width="185" height="365"/>
+      <use href="#site-ambient-sapling" x="1188" y="345" width="138" height="259"/>
+    </g>
+    <g opacity=".33">
+      <use href="#site-ambient-pine" x="-34" y="590" width="199" height="386"/>
+      <use href="#site-ambient-sapling" x="148" y="681" width="118" height="239"/>
+      <use href="#site-ambient-pine" x="1270" y="575" width="215" height="420"/>
+      <use href="#site-ambient-sapling" x="1157" y="670" width="139" height="257"/>
+    </g>
+    <g fill="#b8d997" opacity=".33">
+      <rect x="302" y="143" width="5" height="5"/><rect x="1093" y="204" width="4" height="4"/>
+      <rect x="238" y="547" width="5" height="5"/><rect x="1138" y="624" width="5" height="5"/>
+      <rect x="366" y="767" width="4" height="4"/><rect x="1044" y="801" width="6" height="6"/>
+    </g>
+  </svg>
+  <div class="site-forest-floor">
+    <svg class="site-forest-scene" viewBox="0 0 840 210" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
     <defs>
       <linearGradient id="woodland-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17352b"/><stop offset="1" stop-color="#3a6048"/></linearGradient>
       <symbol id="woodland-pine" viewBox="0 0 80 144">
@@ -102,23 +151,74 @@
     </g>
     <g fill="#e7be79"><rect x="234" y="187" width="5" height="5"/><rect x="239" y="184" width="5" height="4"/><rect x="675" y="175" width="5" height="5"/></g>
   </svg>
-  <p class="pixel-forest-footnote">🌿 slow down. explore the work.</p>
-</section>
+  </div>
+  <div class="site-forest-legibility"></div>
+  <div class="site-forest-firefly site-forest-firefly--one"></div>
+  <div class="site-forest-firefly site-forest-firefly--two"></div>
+  <div class="site-forest-firefly site-forest-firefly--three"></div>
+</div>
 
 <style>
-  .pixel-forest{position:relative;overflow:hidden;margin:0 0 32px;border:1px solid rgba(155,190,116,.34);border-radius:5px;background:#193b2b;box-shadow:0 16px 56px rgba(0,0,0,.18)}
-  .pixel-forest::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 4px rgba(8,27,15,.13)}
-  .pixel-forest-header{position:absolute;z-index:1;top:13px;left:18px;right:18px;display:flex;align-items:center;gap:8px;color:#e1eac2;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.015em;text-shadow:0 1px 2px #143121}
-  .pixel-forest-header-end{margin-left:auto;color:#c0d3b0;opacity:.85;font-size:9px}
-  .pixel-forest-spark{height:6px;width:6px;flex:none;background:#d3c583;box-shadow:8px 0 0 #668e60}
-  .pixel-forest-art{display:block;width:100%;height:240px;image-rendering:pixelated;image-rendering:crisp-edges}
-  .pixel-forest-footnote{position:absolute;left:18px;bottom:11px;color:#f2edcd;background:rgba(15,39,25,.63);padding:3px 7px;margin:0;font:10px 'DM Mono',monospace;letter-spacing:.02em}
-  .pixel-deer-head{transform-box:fill-box;transform-origin:4px 14px;animation:pixel-graze 7.2s steps(4,end) infinite}
-  .pixel-rabbit-nibble{animation:pixel-nibble 2.6s steps(2,end) infinite}
-  .pixel-fireflies{animation:pixel-firefly 4.5s steps(3,end) infinite}
-  @keyframes pixel-graze{0%,18%,85%,100%{transform:rotate(0deg) translateY(0)}35%,67%{transform:rotate(13deg) translateY(6px)}}
-  @keyframes pixel-nibble{0%,55%,100%{transform:translateY(0)}30%,75%{transform:translateY(3px)}}
-  @keyframes pixel-firefly{0%,100%{opacity:.25;transform:translateY(0)}50%{opacity:1;transform:translateY(-6px)}}
-  @media(max-width:650px){.pixel-forest{margin:0 0 28px}.pixel-forest-art{height:185px;width:100%;object-fit:cover}.pixel-forest-header{top:10px;left:10px;font-size:9px}.pixel-forest-header-end{display:none}.pixel-forest-footnote{bottom:8px;left:9px;font-size:9px}}
-  @media(prefers-reduced-motion:reduce){.pixel-deer-head,.pixel-rabbit-nibble,.pixel-fireflies{animation:none}}
+  .site-forest-world {
+    position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none;
+    background:
+      radial-gradient(ellipse at 49% 11%, rgba(83,144,84,.23), transparent 42%),
+      linear-gradient(180deg,#0b1b13 0%,#112b1e 42%,#213e2b 78%,#173321 100%);
+  }
+  .site-forest-atmosphere {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 8% 42%, rgba(81,144,77,.17),transparent 43%),
+      radial-gradient(ellipse at 95% 39%,rgba(111,155,82,.14),transparent 40%),
+      repeating-linear-gradient(0deg,transparent 0 32px,rgba(188,211,147,.012) 32px 33px);
+  }
+  .site-forest-canopy {
+    position:absolute; inset:0; width:100%; height:100%; opacity:.73;
+    image-rendering:pixelated;
+  }
+  .site-forest-floor {
+    position:absolute;bottom:0;left:50%;width:100%;min-width:840px;
+    height:clamp(210px,36vh,370px);
+    transform:translateX(-50%);
+    -webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.42) 18%,#000 43%);
+    mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.42) 18%,#000 43%);
+    opacity:.88;
+  }
+  .site-forest-scene { display:block;width:100%;height:100%;image-rendering:pixelated; }
+  .site-forest-legibility {
+    position:absolute;inset:0;
+    background:
+      linear-gradient(90deg, rgba(8,25,15,.19),transparent 19%,transparent 81%,rgba(8,25,15,.19)),
+      linear-gradient(180deg,rgba(6,21,13,.04),rgba(7,21,14,.07) 62%,rgba(7,21,14,.23));
+  }
+  .site-forest-firefly {
+    position:absolute;width:4px;height:4px;background:#f0e7a4;
+    box-shadow:0 0 12px 3px rgba(227,225,142,.17);
+    opacity:.42;animation:site-firefly-float 7s steps(5,end) infinite;
+  }
+  .site-forest-firefly--one {top:21%;left:12%;animation-delay:-3s}
+  .site-forest-firefly--two {top:42%;right:12%;animation-delay:-5s}
+  .site-forest-firefly--three {top:73%;left:21%;animation-delay:-1s}
+  .pixel-deer-head {transform-box:fill-box;transform-origin:4px 14px;animation:site-graze 7.2s steps(4,end) infinite}
+  .pixel-rabbit-nibble {animation:site-nibble 2.6s steps(2,end) infinite}
+  .pixel-fireflies {animation:site-firefly-float 4.5s steps(3,end) infinite}
+  @keyframes site-graze {0%,18%,85%,100%{transform:rotate(0deg) translateY(0)}35%,67%{transform:rotate(13deg) translateY(6px)}}
+  @keyframes site-nibble {0%,55%,100%{transform:translateY(0)}30%,75%{transform:translateY(3px)}}
+  @keyframes site-firefly-float {0%,100%{opacity:.2;transform:translateY(0)}50%{opacity:.8;transform:translateY(-10px)}}
+  :global(html[data-theme="light"]) .site-forest-world {
+    background:radial-gradient(ellipse at 50% 8%,rgba(124,172,103,.22),transparent 46%),linear-gradient(180deg,#f3f4e6 0%,#e6eed9 57%,#dce9cb 100%);
+  }
+  :global(html[data-theme="light"]) .site-forest-canopy {opacity:.30;filter:saturate(.7)}
+  :global(html[data-theme="light"]) .site-forest-floor {opacity:.19}
+  :global(html[data-theme="light"]) .site-forest-legibility {background:linear-gradient(180deg,rgba(247,249,238,.18),rgba(242,246,227,.16))}
+  :global(html[data-theme="light"]) .site-forest-firefly {opacity:.15}
+  @media(max-width:650px){
+    .site-forest-canopy {opacity:.43}
+    .site-forest-floor {height:240px;min-width:840px}
+    .site-forest-legibility {background:linear-gradient(180deg,rgba(6,21,12,.1),rgba(6,21,12,.2))}
+    .site-forest-firefly--three{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .pixel-deer-head,.pixel-rabbit-nibble,.pixel-fireflies,.site-forest-firefly {animation:none}
+  }
 </style>
