@@ -866,3 +866,121 @@ html[data-theme="light"] .tech-pill--mint { --tech-pill-text:#1e7051;--tech-pill
 html[data-theme="light"] .tech-pill--violet { --tech-pill-text:#7c5625;--tech-pill-bg:rgba(162,125,58,.13);--tech-pill-border:rgba(139,99,50,.3); }
 html[data-theme="light"] .tech-pill--amber { --tech-pill-text:#80570c;--tech-pill-bg:rgba(194,144,49,.14);--tech-pill-border:rgba(157,111,26,.3); }
 @media(prefers-reduced-motion:reduce){.ref-button,.ref-photo-surround,.news-card{transition:none}}
+
+
+/* WOODLAND TRAIL V2 — more useful canvas, less generic spacing and tabs */
+.site-shell.ref-main, .ref-nav, .ref-site-footer {
+  width: min(calc(100% - 64px), 1120px);
+}
+.site-shell.ref-main { padding-bottom: 45px; }
+.ref-nav { min-height: 81px; gap: 28px; }
+.ref-brand { gap: 11px; }
+.ref-brand-mark { width: 40px; height: 40px; font-size: 14px; border-radius: 2px; box-shadow: 4px 4px 0 rgba(93,137,67,.2); }
+.ref-brand-lockup { display: flex; flex-direction: column; line-height: 1.28; gap: 5px; }
+.ref-brand-name { font-size: 14px; font-weight: 700; }
+.ref-brand-caption {
+  color: var(--faint); font-family: 'DM Mono',monospace; font-size: 9px;
+  letter-spacing: .05em; white-space: nowrap;
+}
+/* Four connected trail markers, not a conventional tab-bar pill */
+.ref-nav-links {
+  position: relative; display: flex; justify-content: center; align-items: stretch;
+  flex: 0 1 auto; gap: 0; padding: 6px 6px 2px;
+  border: 0; border-radius: 0; background: transparent;
+}
+.ref-nav-links::before {
+  content: ""; position: absolute; top: 15px; left: 56px; right: 56px; height: 2px;
+  background: repeating-linear-gradient(90deg,rgba(159,194,118,.55) 0 6px,transparent 6px 12px);
+  pointer-events: none;
+}
+.ref-nav-link {
+  position: relative; z-index: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: flex-start; min-width: 100px; min-height: 58px;
+  padding: 0 10px; border: none; border-radius: 0; background: transparent;
+  color: var(--muted); line-height: 1.2; gap: 3px; transition: color .2s ease;
+}
+.ref-nav-link:hover, .ref-nav-link.is-active { background: transparent; box-shadow: none; color: var(--text); transform: none; }
+.trail-marker {
+  display: block; position: relative; width: 12px; height: 12px; margin: 0 0 6px;
+  border: 2px solid #a9c989; background: #1d4330;
+  box-shadow: 2px 2px 0 #1c3121; transform: rotate(45deg);
+  transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease;
+}
+.ref-nav-link.is-active .trail-marker { background: #d4eab0; box-shadow: 0 0 0 3px rgba(129,173,88,.24); }
+.ref-nav-link:hover .trail-marker { background: #91bf77; transform: rotate(45deg) scale(1.2); }
+.trail-label {
+  display: inline-flex; align-items: baseline; gap: 6px;
+  color: inherit; text-transform: uppercase; font-family: 'DM Mono',monospace;
+  font-size: 11px; font-weight: 500; letter-spacing: .08em; white-space: nowrap;
+}
+.trail-index { color: var(--faint); font-size: 9px; letter-spacing: 0; }
+.ref-nav-link.is-active .trail-index { color: var(--blue); }
+.trail-hint {
+  font-family: 'DM Mono',monospace; font-size: 9px;
+  color: var(--faint); text-transform: none; letter-spacing: 0; white-space: nowrap;
+}
+.ref-nav-link.is-active .trail-hint { color: var(--muted); }
+.ref-nav-link:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
+.ref-theme-toggle { border-radius: 2px; height: 37px; width: 37px; }
+html[data-theme="light"] .trail-marker { background: #cee0b7; border-color: #57854a; box-shadow: 2px 2px 0 rgba(64,101,56,.15); }
+html[data-theme="light"] .ref-nav-link.is-active .trail-marker { background: #40733c; border-color: #40733c; box-shadow: 0 0 0 3px rgba(91,136,68,.18); }
+html[data-theme="light"] .ref-nav-links::before { background: repeating-linear-gradient(90deg,rgba(76,121,62,.44) 0 6px,transparent 6px 12px); }
+/* Condense vertical whitespace while allowing the forest to span the wider content width */
+.ref-hero {
+  grid-template-columns: minmax(0,1fr) 242px; gap: clamp(30px,5vw,82px);
+  padding: 43px 0 23px;
+}
+.ref-hero-copy { max-width: 690px; }
+.ref-hero h1 { font-size: clamp(37px,4vw,51px); margin-bottom: 17px; }
+.ref-hero-lead { max-width: 650px; font-size: clamp(16px,1.7vw,19px); }
+.ref-hero-body { max-width: 660px; font-size: 14px; }
+.ref-hero-actions { margin-top: 20px; }
+.ref-simple-section { margin-bottom: 39px; }
+.ref-featured { margin-bottom: 40px; }
+.ref-end-note { margin-top: 39px; }
+.ref-page-intro { margin-top: 43px; margin-bottom: 29px; }
+.projects-hero { padding-top: 43px; }
+.ref-site-footer { padding-top: 22px; }
+/* Important content remains comfortably readable at the wider layout width */
+.ref-about-content, .case-study, .ref-page-intro { max-width: 850px; }
+
+@media(max-width:900px) {
+  .site-shell.ref-main, .ref-nav, .ref-site-footer { width: min(calc(100% - 44px), 1120px); }
+  .ref-nav { gap: 12px; }
+  .ref-nav-link { min-width: 75px; padding: 0 4px; }
+  .ref-nav-links::before { left: 44px; right: 44px; }
+  .ref-brand-caption { display: none; }
+  .ref-hero { grid-template-columns: minmax(0,1fr) 205px; gap: 26px; }
+}
+@media(max-width:650px) {
+  .site-shell.ref-main, .ref-nav, .ref-site-footer { width: min(calc(100% - 30px), 1120px); }
+  .ref-nav { min-height: 0; padding: 12px 0 10px; flex-wrap: wrap; gap: 10px 12px; }
+  .ref-brand-mark { width: 34px; height: 34px; }
+  .ref-brand-name { font-size: 12px; }
+  .ref-nav-links { order: 3; width: 100%; padding: 7px 0 0; justify-content: space-between; }
+  .ref-nav-links::before { top: 15px; left: 12.5%; right: 12.5%; }
+  .ref-nav-link { flex: 1; min-width: 0; min-height: 39px; padding: 0 3px; gap: 2px; }
+  .trail-marker { width: 10px; height: 10px; margin-bottom: 5px; }
+  .trail-label { font-size: 10px; gap: 4px; }
+  .trail-index { font-size: 8px; }
+  .trail-hint { display: none; }
+  .ref-hero { grid-template-columns: minmax(0,1fr) 124px; gap: 18px; padding: 32px 0 16px; align-items: center; }
+  .ref-hero h1 { font-size: clamp(29px,5.8vw,37px); }
+  .ref-hero-body { font-size: 12px; }
+  .ref-hero-lead { font-size: 14px; }
+  .ref-page-intro { margin-top: 30px; }
+}
+@media(max-width:450px) {
+  .site-shell.ref-main, .ref-nav, .ref-site-footer { width: min(calc(100% - 28px), 1120px); }
+  .ref-hero { grid-template-columns: minmax(0,1fr) 94px; gap: 11px; padding: 28px 0 11px; }
+  .ref-hero h1 { font-size: 31px; }
+  .ref-hero-actions { gap: 10px 14px; margin-top: 17px; }
+  .ref-brand-name { font-size: 12px; }
+  .trail-label { font-size: 9px; gap: 3px; }
+  .trail-index { font-size: 7px; }
+  .ref-nav-links::before { left: 12.5%; right: 12.5%; }
+  .ref-simple-section { margin-bottom: 33px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .trail-marker { transition: none; }
+}
