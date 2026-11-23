@@ -43,8 +43,24 @@ const education = [
     <div class="ref-section-label"><span class="ref-label-line"></span> WHAT'S NEW <span class="ref-label-right">NOVEMBER 2026</span></div>
     <div class="ref-section-heading"><h2 id="whats-new-heading">recent milestones</h2><a class="ref-text-link" href="/about#certifications-title">View credentials <span aria-hidden="true">↗</span></a></div>
     <div class="news-grid">
-      <article class="news-card news-card--credential"><div class="news-credential-top"><img class="news-badge" src="/amd-rocm-certified-associate.svg" alt="AMD ROCm Certified Associate digital badge" width="104" height="104" loading="lazy" decoding="async" /><div><span class="news-kicker">NEW CERTIFICATION · 2026</span><h3>AMD ROCm Certified Associate</h3></div></div><p>Earned the AMD ROCm Certified Associate credential after completing training in GPU architecture, HIP programming, AI frameworks, and GPU performance optimization.</p><div class="ref-tags"><span class="tech-pill tech-pill--amber">AMD ROCm</span><span class="tech-pill tech-pill--blue">HIP</span><span class="tech-pill tech-pill--mint">PyTorch</span></div></article>
-      <article class="news-card"><span class="news-kicker">ENGINEERING · IN PROGRESS</span><h3>Building safer AI workflows</h3><p>Continuing to develop JEANSRS.OPS with specialist agents, read-only investigations, audit evidence, and human approval controls for operational decisions.</p><a href="/projects/jeansrs-ops" class="ref-text-link">Explore the project <span aria-hidden="true">↗</span></a></article>
+      <article class="news-card news-card--credential news-card--microsoft">
+        <div class="news-credential-top">
+          <div class="news-microsoft-mark" aria-hidden="true"><span class="news-microsoft-symbol">MCP</span><span class="news-microsoft-submark">APPLIED SKILLS</span></div>
+          <div><span class="news-kicker">NEW MICROSOFT CREDENTIAL · NOV 20, 2026</span><h3>Microsoft Applied Skills</h3></div>
+        </div>
+        <p>Earned <strong>Integrate model context protocol tools with agents in Microsoft Foundry</strong> — a hands-on credential demonstrating agent configuration, MCP integration, and monitoring.</p>
+        <div class="ref-tags"><span class="tech-pill tech-pill--blue">Microsoft Foundry</span><span class="tech-pill tech-pill--mint">MCP</span><span class="tech-pill tech-pill--violet">AI agents</span></div>
+        <a href="/about#certifications-title" class="ref-text-link">View earned credentials <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="news-card news-card--credential">
+        <div class="news-credential-top">
+          <img class="news-badge" src="/amd-rocm-certified-associate.svg" alt="AMD ROCm Certified Associate digital badge" width="104" height="104" loading="lazy" decoding="async" />
+          <div><span class="news-kicker">NEW CERTIFICATION · 2026</span><h3>AMD ROCm Certified Associate</h3></div>
+        </div>
+        <p>Earned the AMD ROCm Certified Associate credential after training in GPU architecture, HIP programming, AI frameworks, and GPU performance optimization.</p>
+        <div class="ref-tags"><span class="tech-pill tech-pill--amber">AMD ROCm</span><span class="tech-pill tech-pill--blue">HIP</span><span class="tech-pill tech-pill--mint">PyTorch</span></div>
+        <a href="/about#certifications-title" class="ref-text-link">View earned credentials <span aria-hidden="true">↗</span></a>
+      </article>
     </div>
   </section>
 
@@ -128,4 +144,12 @@ const education = [
   @media(max-width:410px){.news-badge{width:82px;height:82px}.news-credential-top{gap:13px}}
   .news-card .ref-text-link{margin-top:auto}
   @media(max-width:700px){.news-grid{grid-template-columns:1fr}.news-card{padding:20px}}
+
+  .news-card--microsoft { border-color: rgba(156,196,110,.43);background:radial-gradient(circle at 92% 10%,rgba(103,151,81,.16),transparent 48%),var(--panel) }
+  .news-card--credential p strong { color:var(--text);font-weight:650 }
+  .news-card--credential > .ref-text-link { margin-top:0; }
+  .news-microsoft-mark { flex:0 0 104px; height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;border:1px solid rgba(168,208,132,.52);border-radius:5px;background:linear-gradient(140deg,#254b35,#142d21);box-shadow:4px 4px 0 rgba(24,62,37,.16);font-family:'DM Mono',monospace;color:#e5efcc; }
+  .news-microsoft-symbol {font-size:25px;font-weight:700;letter-spacing:.05em;line-height:1}
+  .news-microsoft-submark {font-size:8px;letter-spacing:.04em;color:#bfd89c}
+  @media(max-width:410px){.news-microsoft-mark{flex-basis:82px;height:82px}.news-microsoft-symbol{font-size:21px}.news-microsoft-submark{font-size:7px}}
 </style>
